@@ -17,7 +17,7 @@ import "@fontsource/inter";
 const pages = ['Product', 'Pricing', 'About us'];
 const settings = ['Profile', 'Account', 'Result', 'Logout'];
 
-function Navbar() {
+function Navbar(loggedIn: boolean) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -127,7 +127,7 @@ function Navbar() {
                   sx={{
                     color: '#4B5563',
                     fontFamily: "Inter",
-                    textTransform: "none"
+                    textTransform: "none",
                   }}
                   style={{
                     fontSize: "14px"
@@ -138,45 +138,73 @@ function Navbar() {
               </Box>
             ))}
           </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography
-                    textAlign="center"
-                    sx={{
-                      fontFamily: "Inter",
-                      fontSize: "small",
-                      color: '#4B5563'
-                    }}
-                  >
-                    {setting}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          {loggedIn ? (
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: '45px' }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography
+                      textAlign="center"
+                      sx={{
+                        fontFamily: "Inter",
+                        fontSize: "small",
+                        color: '#4B5563'
+                      }}
+                    >
+                      {setting}
+                    </Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+            ):(
+            <Box sx={{ flexGrow: 0 }}>
+              <Button
+                sx={{
+                  color: "#4B5563",
+                  fontSize: "14px",
+                  fontFamily: "Inter",
+                  textTransform: "none",
+                  mr: "15px"
+                }}
+              >
+                Login
+              </Button>
+              <Button
+                sx={{
+                  background: "#527643",
+                  color: "#ffff",
+                  fontSize: "14px",
+                  fontFamily: "Inter",
+                  borderRadius: "50px",
+                  textTransform: "none",
+                  padding: "7px 14px"
+                }}
+              >
+                Try for free
+              </Button>
+            </Box>
+            )}
         </Toolbar>
       </Container>
     </AppBar>
