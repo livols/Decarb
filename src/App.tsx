@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 import Navbar from "./navigation/navbar";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { Product } from "./pages/product";
