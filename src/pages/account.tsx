@@ -1,9 +1,13 @@
 import Navbar from "../navigation/navbar";
 
-export function Account() {
+type AccountProps = {
+  loggedIn: boolean;
+}
+
+export function Account(props: AccountProps) {
   return (
     <div>
-      {Navbar(true)}
+      {Navbar(props.loggedIn)}
       <h2>Account</h2>
     </div>
   );

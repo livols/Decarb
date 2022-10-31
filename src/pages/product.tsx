@@ -1,9 +1,13 @@
 import Navbar from "../navigation/navbar";
 
-export function Product() {
+type ProductProps = {
+  loggedIn: boolean;
+}
+
+export function Product(props:ProductProps) {
   return (
     <div>
-      {Navbar(true)}
+      {Navbar(props.loggedIn)}
       <h2>Product</h2>
     </div>
   );

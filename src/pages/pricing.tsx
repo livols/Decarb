@@ -1,9 +1,13 @@
 import Navbar from "../navigation/navbar";
 
-export function Pricing() {
+type PricingProps = {
+  loggedIn: boolean;
+}
+
+export function Pricing(props:PricingProps) {
   return (
     <div>
-      {Navbar(true)}
+      {Navbar(props.loggedIn)}
       <h2>Pricing</h2>
     </div>
   );
