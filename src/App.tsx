@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
-import './App.css';
-import {Product} from "./pages/product";
-import {Pricing} from "./pages/pricing";
-import {About} from "./pages/about";
-import {Account} from "./pages/account";
-import {Result} from "./pages/result";
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-} from "react-router-dom";
+import React, { useState } from "react";
+import "./App.css";
+import { Product } from "./pages/product";
+import { Pricing } from "./pages/pricing";
+import { About } from "./pages/about";
+import { Account } from "./pages/account";
+import { Result } from "./pages/result";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(true);

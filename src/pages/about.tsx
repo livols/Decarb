@@ -2,7 +2,7 @@ import Navbar from "../navigation/navbar";
 
 type AboutProps = {
   loggedIn: boolean;
-}
+};
 
 export function About(props: AboutProps) {
   return (

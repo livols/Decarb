@@ -2,7 +2,7 @@ import Navbar from "../navigation/navbar";
 
 type AccountProps = {
   loggedIn: boolean;
-}
+};
 
 export function Account(props: AccountProps) {
   return (

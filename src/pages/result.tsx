@@ -2,9 +2,9 @@ import Navbar from "../navigation/navbar";
 
 type ResultProps = {
   loggedIn: boolean;
-}
+};
 
-export function Result(props:ResultProps) {
+export function Result(props: ResultProps) {
   return (
     <div>
       {Navbar(props.loggedIn)}
