@@ -15,18 +15,23 @@ import logo from "../images/logo.png";
 import "@fontsource/inter";
 import { useNavigate } from "react-router-dom";
 
+type NavbarProps = {
+  loggedIn: boolean;
+};
+
 const pages = [
   { text: "Product", href: "/" },
   { text: "Pricing", href: "/pricing" },
   { text: "About us", href: "/about" },
 ];
+
 const settings = [
   { text: "Account", href: "/account" },
   { text: "Result", href: "/result" },
   { text: "Logout", href: "/" },
 ];
 
-function Navbar(loggedIn: boolean) {
+function Navbar(props: NavbarProps) {
   let navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -150,7 +155,7 @@ function Navbar(loggedIn: boolean) {
               </Box>
             ))}
           </Box>
-          {loggedIn ? (
+          {props.loggedIn ? (
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

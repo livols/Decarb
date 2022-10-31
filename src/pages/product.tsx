@@ -1,13 +1,6 @@
-import Navbar from "../navigation/navbar";
-
-type ProductProps = {
-  loggedIn: boolean;
-};
-
-export function Product(props: ProductProps) {
+export function Product() {
   return (
     <div>
-      {Navbar(props.loggedIn)}
       <h2>Product</h2>
     </div>
   );
