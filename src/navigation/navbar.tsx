@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 
 type NavbarProps = {
   loggedIn: boolean;
+  callback: Function;
 };
 
 const pages = [
@@ -53,6 +54,15 @@ function Navbar(props: NavbarProps) {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  const onClickSetting = (text: string, href: string) => {
+    if (text === "Logout") {
+      props.callback(false);
+      navigate(href);
+    } else {
+      navigate(href);
+    }
   };
 
   return (
@@ -187,7 +197,7 @@ function Navbar(props: NavbarProps) {
                         fontSize: "small",
                         color: "#4B5563",
                       }}
-                      onClick={() => navigate(setting.href)}
+                      onClick={() => onClickSetting(setting.text, setting.href)}
                     >
                       {setting.text}
                     </Typography>
@@ -198,6 +208,7 @@ function Navbar(props: NavbarProps) {
           ) : (
             <Box sx={{ flexGrow: 0 }}>
               <Button
+                onClick={() => props.callback(true)}
                 sx={{
                   color: "#4B5563",
                   fontSize: "14px",

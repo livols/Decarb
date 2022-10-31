@@ -11,10 +11,14 @@ import { Result } from "./pages/result";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
+  const callback = (login: boolean) => {
+    setLoggedIn(login);
+  };
+
   return (
     <BrowserRouter>
       <div>
-        <Navbar loggedIn={loggedIn} />
+        <Navbar loggedIn={loggedIn} callback={callback} />
         <Routes>
           <Route path="/" element={<Product />} />
           <Route path="/pricing" element={<Pricing />} />
