@@ -13,11 +13,21 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../images/logo.png';
 import "@fontsource/inter";
+import { useNavigate } from "react-router-dom";
 
-const pages = ['Product', 'Pricing', 'About us'];
-const settings = ['Profile', 'Account', 'Result', 'Logout'];
+const pages = [
+  {text: 'Product', href: '/'},
+  {text: 'Pricing', href: '/pricing'},
+  {text: 'About us', href: '/about'}
+];
+const settings = [
+  {text: 'Account', href: '/account'},
+  {text: 'Result', href: '/result'},
+  {text: 'Logout', href: '/'}
+];
 
 function Navbar(loggedIn: boolean) {
+  let navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -95,11 +105,13 @@ function Navbar(loggedIn: boolean) {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={page.text}
+                  onClick={handleCloseNavMenu}>
                   <Typography
                     textAlign="center"
                   >
-                    {page}
+                    {page.text}
                   </Typography>
                 </MenuItem>
               ))}
@@ -122,8 +134,9 @@ function Navbar(loggedIn: boolean) {
                   mx: "10px"
                 }}>
                 <Button
-                  key={page}
+                  key={page.text}
                   onClick={handleCloseNavMenu}
+                  href={page.href}
                   sx={{
                     color: '#4B5563',
                     fontFamily: "Inter",
@@ -133,7 +146,7 @@ function Navbar(loggedIn: boolean) {
                     fontSize: "14px"
                   }}
                 >
-                  {page}
+                  {page.text}
                 </Button>
               </Box>
             ))}
@@ -162,7 +175,10 @@ function Navbar(loggedIn: boolean) {
                 onClose={handleCloseUserMenu}
               >
                 {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <MenuItem
+                    key={setting.text}
+                    onClick={handleCloseUserMenu}
+                  >
                     <Typography
                       textAlign="center"
                       sx={{
@@ -170,8 +186,9 @@ function Navbar(loggedIn: boolean) {
                         fontSize: "small",
                         color: '#4B5563'
                       }}
+                      onClick={() => navigate(setting.href)}
                     >
-                      {setting}
+                      {setting.text}
                     </Typography>
                   </MenuItem>
                 ))}
