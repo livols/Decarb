@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { GoogleMap, InfoBox, LoadScript, MarkerF } from '@react-google-maps/api';
+import React from "react";
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import MapMarker from "./MapMarker";
 
 const marks = [{
