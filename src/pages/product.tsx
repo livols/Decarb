@@ -1,4 +1,4 @@
-import SimpleMap from "../visualisation/map";
+import SimpleMap from "../visualisation/map/map";
 
 export function Product() {
   return (
