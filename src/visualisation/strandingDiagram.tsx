@@ -20,6 +20,7 @@ export const StrandingDiagram = () => {
   const handleChange = (event: SelectChangeEvent) => {
     setTarget(event.target.value);
   };
+
   return (
     <div>
       <Box
@@ -45,7 +46,7 @@ export const StrandingDiagram = () => {
       >
         <div>
           <AreaChart
-            width={1052}
+            width={880}
             height={269}
             data={strandingData}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
@@ -59,20 +60,20 @@ export const StrandingDiagram = () => {
             <XAxis dataKey="Year" stroke="#A2A3A5" />
             <YAxis
               label={{
-                value: "GHG Intensity [KgCO2e/m2/yr]",
+                value: "GHG Intensity [KgCO²e/m₂/yr]",
                 angle: -90,
                 position: "center",
-                dx: -40,
+                dx: -22,
                 fill: "#A2A3A5",
               }}
               stroke="#A2A3A5"
             />
             <CartesianGrid vertical={false} />
             <Tooltip />
-            <Legend />
+            <Legend verticalAlign="top" height={36} />
             <Area
               dataKey="Baseline carbon performance of asset"
-              stroke="#343434"
+              stroke="#6B7280"
               strokeWidth={2}
               fill="transparent"
               type="stepBefore"
