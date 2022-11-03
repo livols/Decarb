@@ -15,10 +15,10 @@ import "@fontsource/inter";
 import "@fontsource/lexend";
 
 export const StrandingDiagram = () => {
-  const [age, setAge] = React.useState("1");
+  const [target, setTarget] = React.useState("1");
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value);
+    setTarget(event.target.value);
   };
   return (
     <div>
@@ -102,7 +102,7 @@ export const StrandingDiagram = () => {
             >
               Global warming target
             </Typography>
-            <Select value={age} onChange={handleChange} displayEmpty>
+            <Select value={target} onChange={handleChange} displayEmpty>
               <MenuItem value={1}>1.5°C</MenuItem>
               <MenuItem value={2}>2°C</MenuItem>
             </Select>
