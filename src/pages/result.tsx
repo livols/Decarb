@@ -1,6 +1,6 @@
 export function Result() {
   return (
-    <div>
+    <div style={{marginLeft: "2%"}}>
       <h2>Result</h2>
     </div>
   );

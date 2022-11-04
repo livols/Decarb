@@ -1,6 +1,6 @@
 export function Product() {
   return (
-    <div>
+    <div style={{marginLeft: "2%"}}>
       <h2>Product</h2>
     </div>
   );

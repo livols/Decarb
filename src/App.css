@@ -54,3 +54,8 @@
     width: 50%;
     margin-top: 50px;
 }
+
+.navBox {
+    display:flex;
+    flex-direction: row;
+}

@@ -7,6 +7,7 @@ import { Pricing } from "./pages/pricing";
 import { About } from "./pages/about";
 import { Account } from "./pages/account";
 import { Result } from "./pages/result";
+import Layout from "./navigation/sideBar";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -17,7 +18,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="navBox">
+        {loggedIn && <Layout />}
+        <div style={{width: "100%"}}>
         <Navbar loggedIn={loggedIn} callback={callback} />
         <Routes>
           <Route path="/" element={<Product />} />
@@ -26,6 +29,7 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/result" element={<Result />} />
         </Routes>
+      </div>
       </div>
     </BrowserRouter>
   );
