@@ -1,4 +1,5 @@
-import { InfoBox, MarkerF } from '@react-google-maps/api'
+import { Typography } from '@mui/material'
+import { InfoBox, InfoWindow, MarkerF } from '@react-google-maps/api'
 import React, { useState } from 'react'
 
 type MapMarkerProps = {
@@ -33,15 +34,11 @@ export default function MapMarker(props: MapMarkerProps) {
             //TODO: Add onClick Routing when the page is created
         >
             {showInfo && 
-                <InfoBox
-                  options={{ closeBoxURL: ``, enableEventPropagation: true }}
-                >
-                  <div style={{ backgroundColor: `green`, opacity: 1, padding: `12px` }}>
-                    <div style={{ fontSize: `16px`, color: 'white' }}>
-                      {props.address}
-                    </div>
+                <InfoWindow>
+                  <div style={{ backgroundColor: `#ffff`, opacity: 1, padding: `12px` }}>
+                    <Typography sx={{ color: "#0D0D0D", fontFamily: "Inter", fontSize: "16px" }} >{props.address}</Typography>
                   </div>
-                </InfoBox>}
+                </InfoWindow>}
         </MarkerF>
     )
 }
