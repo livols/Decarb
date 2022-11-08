@@ -11,11 +11,12 @@ import {
 } from "recharts";
 import { FormControl, MenuItem, Typography, Box } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { strandingData } from "../data/dummy";
+import { strandingData } from "../../data/dummy";
 import "@fontsource/inter";
 import "@fontsource/lexend";
+import { CustomTooltip } from "./customTooltip";
 
-export const StrandingDiagram = () => {
+export const Graph = () => {
   const [target, setTarget] = useState("1");
   const [data, setData] = useState(strandingData);
 
@@ -82,7 +83,7 @@ export const StrandingDiagram = () => {
               stroke="#A2A3A5"
             />
             <CartesianGrid vertical={false} />
-            <Tooltip />
+            <Tooltip content={<CustomTooltip />} />
             <Legend verticalAlign="top" height={36} />
             <Area
               dataKey="Baseline"

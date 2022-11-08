@@ -1,9 +1,9 @@
-import { StrandingDiagram } from "../visualisation/strandingDiagram";
+import { Graph } from "../visualisation/strandingDiagram/graph";
 
 export function Result() {
   return (
     <div>
-      <StrandingDiagram />
+      <Graph />
     </div>
   );
 }
