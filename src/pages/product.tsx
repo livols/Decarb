@@ -1,3 +1,5 @@
+import SimpleMap from "../visualisation/map/map";
+
 export function Product() {
   return (
     <div style={{marginLeft: "2%"}}>
