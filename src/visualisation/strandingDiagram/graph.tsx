@@ -11,16 +11,22 @@ import {
 } from "recharts";
 import { FormControl, MenuItem, Typography, Box } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { strandingData } from "../../data/dummy";
 import "@fontsource/inter";
 import "@fontsource/lexend";
 import { CustomTooltip } from "./customTooltip";
 
-export const Graph = () => {
-  const [target, setTarget] = useState("1");
-  const [data, setData] = useState(strandingData);
+type StrandingObjectProps = {
+  Year: string;
+  Baseline: number;
+  Decarbonisation: number;
+  Emission: number;
+};
 
-  const strandingData2 = strandingData.map((element) => ({
+export const Graph = (props: { strandingData: StrandingObjectProps[] }) => {
+  const [target, setTarget] = useState("1");
+  const [data, setData] = useState(props.strandingData);
+
+  const strandingData2 = props.strandingData.map((element: any) => ({
     ...element,
     Decarbonisation: element.Decarbonisation + 10,
     Baseline: element.Baseline + 10,
@@ -33,7 +39,7 @@ export const Graph = () => {
     if (target === "1") {
       setData(strandingData2);
     } else {
-      setData(strandingData);
+      setData(props.strandingData);
     }
   };
 
