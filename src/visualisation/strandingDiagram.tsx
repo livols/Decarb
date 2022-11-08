@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import {
   AreaChart,
   CartesianGrid,
@@ -7,6 +7,7 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  ResponsiveContainer,
 } from "recharts";
 import { FormControl, MenuItem, Typography, Box } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -15,18 +16,16 @@ import "@fontsource/inter";
 import "@fontsource/lexend";
 
 export const StrandingDiagram = () => {
-  const [target, setTarget] = React.useState("1");
+  const [target, setTarget] = useState("1");
 
   const handleChange = (event: SelectChangeEvent) => {
     setTarget(event.target.value);
   };
 
-  /*if (target === "2") {
-    const result = strandingData.map((element) => ({
-      Decarbonisation: element.Decarbonisation + 10,
-    }));
-    console.log(result);
-  }*/
+  const strandingData2 = strandingData.map((element) => ({
+    ...element,
+    Decarbonisation: element.Decarbonisation + 10,
+  }));
 
   return (
     <div>
@@ -51,7 +50,7 @@ export const StrandingDiagram = () => {
           justifyContent: "center",
         }}
       >
-        <div>
+        <ResponsiveContainer>
           <AreaChart
             width={880}
             height={269}
@@ -104,7 +103,7 @@ export const StrandingDiagram = () => {
               strokeDasharray="4 4"
             />
           </AreaChart>
-        </div>
+        </ResponsiveContainer>
         <div style={{ paddingTop: "65px" }}>
           <FormControl sx={{ m: 1, minWidth: 50 }}>
             <Typography
