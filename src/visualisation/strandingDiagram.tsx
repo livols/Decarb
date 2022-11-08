@@ -21,6 +21,13 @@ export const StrandingDiagram = () => {
     setTarget(event.target.value);
   };
 
+  /*if (target === "2") {
+    const result = strandingData.map((element) => ({
+      Decarbonisation: element.Decarbonisation + 10,
+    }));
+    console.log(result);
+  }*/
+
   return (
     <div>
       <Box
@@ -72,7 +79,8 @@ export const StrandingDiagram = () => {
             <Tooltip />
             <Legend verticalAlign="top" height={36} />
             <Area
-              dataKey="Baseline carbon performance of asset"
+              dataKey="Baseline"
+              name="Baseline carbon performance of asset"
               stroke="#6B7280"
               strokeWidth={2}
               fill="transparent"
@@ -80,14 +88,16 @@ export const StrandingDiagram = () => {
             />
             <Area
               type="monotone"
-              dataKey="Sector decarbonisation target"
+              dataKey="Decarbonisation"
+              name="Sector decarbonisation target"
               stroke="#7A9C6C"
               fillOpacity={1}
               strokeWidth={2}
               fill="url(#colorPv)"
             />
             <Area
-              dataKey="Constant emission"
+              dataKey="Emission"
+              name="Constant emission"
               stroke="#1E1E1E"
               strokeWidth={1}
               fill="transparent"
