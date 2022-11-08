@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AreaChart,
   CartesianGrid,
@@ -17,15 +17,24 @@ import "@fontsource/lexend";
 
 export const StrandingDiagram = () => {
   const [target, setTarget] = useState("1");
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setTarget(event.target.value);
-  };
+  const [data, setData] = useState(strandingData);
 
   const strandingData2 = strandingData.map((element) => ({
     ...element,
     Decarbonisation: element.Decarbonisation + 10,
+    Baseline: element.Baseline + 10,
+    Emission: element.Emission + 10,
   }));
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setTarget(event.target.value);
+
+    if (target === "1") {
+      setData(strandingData2);
+    } else {
+      setData(strandingData);
+    }
+  };
 
   return (
     <div>
@@ -50,11 +59,9 @@ export const StrandingDiagram = () => {
           justifyContent: "center",
         }}
       >
-        <ResponsiveContainer>
+        <ResponsiveContainer width="50%" height={269}>
           <AreaChart
-            width={880}
-            height={269}
-            data={strandingData}
+            data={data}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
           >
             <defs>
@@ -113,8 +120,8 @@ export const StrandingDiagram = () => {
               Global warming target
             </Typography>
             <Select value={target} onChange={handleChange} displayEmpty>
-              <MenuItem value={1}>1.5°C</MenuItem>
-              <MenuItem value={2}>2°C</MenuItem>
+              <MenuItem value={"1"}>1.5°C</MenuItem>
+              <MenuItem value={"2"}>2°C</MenuItem>
             </Select>
           </FormControl>
         </div>
