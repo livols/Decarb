@@ -4,7 +4,7 @@ import { strandingData } from "../data/dummy";
 export function Portfolio() {
   return (
     <div>
-      <Graph strandingData={strandingData} />
+      <Graph strandingData={strandingData} companyName={"PFA"} />
     </div>
   );
 }

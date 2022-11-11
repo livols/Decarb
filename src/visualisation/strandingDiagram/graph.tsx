@@ -22,7 +22,10 @@ type StrandingObjectProps = {
   Emission: number;
 };
 
-export const Graph = (props: { strandingData: StrandingObjectProps[] }) => {
+export const Graph = (props: {
+  strandingData: StrandingObjectProps[];
+  companyName: string;
+}) => {
   const [target, setTarget] = useState("1");
   const [data, setData] = useState(props.strandingData);
 
@@ -56,7 +59,7 @@ export const Graph = (props: { strandingData: StrandingObjectProps[] }) => {
             sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
             variant="h4"
           >
-            PFA property portfolio
+            {props.companyName} property portfolio
           </Typography>
         </div>
       </Box>
