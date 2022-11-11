@@ -126,7 +126,29 @@ export const Graph = (props: { strandingData: StrandingObjectProps[] }) => {
             >
               Global warming target
             </Typography>
-            <Select value={target} onChange={handleChange} displayEmpty>
+            <Select
+              sx={{
+                borderColor: "#A2A3A5",
+                "&:hover": {
+                  "&& fieldset": {
+                    border: "1px solid #7A9C6C",
+                  },
+                },
+                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                  border: "2px solid #7A9C6C",
+                },
+              }}
+              value={target}
+              onChange={handleChange}
+              displayEmpty
+              MenuProps={{
+                sx: {
+                  "&& .Mui-selected": {
+                    backgroundColor: "#A4C099",
+                  },
+                },
+              }}
+            >
               <MenuItem value={"1"}>1.5°C</MenuItem>
               <MenuItem value={"2"}>2°C</MenuItem>
             </Select>
