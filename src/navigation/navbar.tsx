@@ -28,7 +28,7 @@ const pages = [
 
 const settings = [
   { text: "Account", href: "/account" },
-  { text: "Result", href: "/result" },
+  { text: "Portfolio", href: "/portfolio" },
   { text: "Logout", href: "/" },
 ];
 

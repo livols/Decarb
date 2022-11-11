@@ -5,7 +5,7 @@ import { Product } from "./pages/product";
 import { Pricing } from "./pages/pricing";
 import { About } from "./pages/about";
 import { Account } from "./pages/account";
-import { Result } from "./pages/result";
+import { Portfolio } from "./pages/portfolio";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -23,7 +23,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/account" element={<Account />} />
-          <Route path="/result" element={<Result />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
       </div>
     </BrowserRouter>
