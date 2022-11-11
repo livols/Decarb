@@ -97,91 +97,85 @@ export const strandingData = [
   },
 ];
 
-export const addressData = [
+export const overviewData = [
   {
-    address: "gothersgade",
-    number: "3",
-    code: "1123",
-    city: "københavn k",
-    expenditure: [
-      {
-        year: 2022,
-        "With Improvement": 100,
-        "Without Improvement": 120,
-      },
-      {
-        year: 2023,
-        "With Improvement": 182,
-        "Without Improvement": 286,
-      },
-      {
-        year: 2024,
-        "With Improvement": 148,
-        "Without Improvement": 200,
-      },
-      {
-        year: 2025,
-        "With Improvement": 119,
-        "Without Improvement": 158,
-      },
-      {
-        year: 2026,
-        "With Improvement": 100,
-        "Without Improvement": 142,
-      },
-      {
-        year: 2027,
-        "With Improvement": 83,
-        "Without Improvement": 146,
-      },
-      {
-        year: 2028,
-        "With Improvement": 56,
-        "Without Improvement": 140,
-      },
-    ],
+    Year: "2020",
+    Decarbonisation: 100,
+    Emission: 45,
   },
   {
-    address: "gothersgade",
-    number: "10",
-    code: "1123",
-    city: "københavn k",
-    expenditure: [
-      {
-        year: 2022,
-        "With Improvement": 251,
-        "Without Improvement": 295,
-      },
-      {
-        year: 2023,
-        "With Improvement": 223,
-        "Without Improvement": 286,
-      },
-      {
-        year: 2024,
-        "With Improvement": 200,
-        "Without Improvement": 254,
-      },
-      {
-        year: 2025,
-        "With Improvement": 174,
-        "Without Improvement": 235,
-      },
-      {
-        year: 2026,
-        "With Improvement": 152,
-        "Without Improvement": 252,
-      },
-      {
-        year: 2027,
-        "With Improvement": 110,
-        "Without Improvement": 230,
-      },
-      {
-        year: 2028,
-        "With Improvement": 84,
-        "Without Improvement": 140,
-      },
-    ],
+    Year: "2022",
+    Decarbonisation: 95,
+    Emission: 45,
+  },
+  {
+    Year: "2024",
+    Decarbonisation: 90,
+    Emission: 45,
+  },
+  {
+    Year: "2026",
+    Decarbonisation: 80,
+    Emission: 45,
+  },
+  {
+    Year: "2028",
+    Decarbonisation: 70,
+    Emission: 45,
+  },
+  {
+    Year: "2030",
+    Decarbonisation: 60,
+    Emission: 45,
+  },
+  {
+    Year: "2032",
+    Decarbonisation: 50,
+    Emission: 45,
+  },
+  {
+    Year: "2034",
+    Decarbonisation: 45,
+    Emission: 45,
+  },
+  {
+    Year: "2036",
+    Decarbonisation: 40,
+    Emission: 45,
+  },
+  {
+    Year: "2038",
+    Decarbonisation: 33,
+    Emission: 45,
+  },
+  {
+    Year: "2040",
+    Decarbonisation: 30,
+    Emission: 45,
+  },
+  {
+    Year: "2042",
+    Decarbonisation: 25,
+    Emission: 45,
+  },
+  {
+    Year: "2044",
+    Decarbonisation: 18,
+    Emission: 45,
+  },
+  {
+    Year: "2046",
+    Decarbonisation: 15,
+    Emission: 45,
+  },
+  {
+    Year: "2048",
+    Decarbonisation: 10,
+    Emission: 45,
+  },
+  {
+    Year: "2050",
+    Decarbonisation: 0,
+    Emission: 45,
   },
 ];
