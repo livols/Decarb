@@ -28,6 +28,14 @@ export function Portfolio() {
             PFA property portfolio
           </Typography>
         </div>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "15px",
+        }}
+      >
         <FormControl sx={{ m: 1, minWidth: 50 }}>
           <Typography
             sx={{ color: "#0D0D0D", fontFamily: "Inter" }}
@@ -63,6 +71,20 @@ export function Portfolio() {
           </Select>
         </FormControl>
       </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "25px",
+        }}
+      >
+        <Typography
+          sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
+          variant="h4"
+        >
+          All Assets
+        </Typography>
+      </Box>
       <OverviewGraph
         strandingData={overviewData}
         companyName={"PFA"}
@@ -75,7 +97,7 @@ export function Portfolio() {
           justifyContent: "center",
         }}
       >
-        <div style={{ paddingTop: "40px", paddingBottom: "40px" }}>
+        <div style={{ paddingTop: "40px" }}>
           <Typography
             sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
             variant="h4"
