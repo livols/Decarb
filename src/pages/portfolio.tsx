@@ -93,9 +93,9 @@ export function Portfolio() {
       >
         <Typography
           sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
-          variant="h4"
+          variant="h5"
         >
-          All Assets
+          Overview of all assets
         </Typography>
       </Box>
       <Box
@@ -120,7 +120,7 @@ export function Portfolio() {
         <div style={{ paddingTop: "40px" }}>
           <Typography
             sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
-            variant="h4"
+            variant="h5"
           >
             Asset {id + 1}
           </Typography>
