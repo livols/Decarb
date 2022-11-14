@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  createStyles,
-  makeStyles,
-  Theme,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, Typography } from "@mui/material";
 import "@fontsource/inter";
 
 const getIntroOfPage = (label: string) => {
