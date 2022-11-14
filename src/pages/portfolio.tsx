@@ -1,16 +1,26 @@
 import { Graph } from "../visualisation/strandingDiagram/graph";
 import { OverviewGraph } from "../visualisation/portfolioDiagram/overviewGraph";
-import { overviewData, strandingData } from "../data/dummy";
-import { useState } from "react";
+import { overviewData } from "../data/overview";
+import { asset1, asset2 } from "../data/assets";
+import { useEffect, useState } from "react";
 import { Box, FormControl, MenuItem, Typography } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { AssetList } from "../utils/assetList";
 
 export function Portfolio() {
   const [target, setTarget] = useState("1");
+  const [asset, setAsset] = useState(asset1);
 
   const handleChange = (event: SelectChangeEvent) => {
     setTarget(event.target.value);
+  };
+
+  const setAssetData = (value: number) => {
+    if (value % 2 === 0) {
+      setAsset(asset1);
+    } else {
+      setAsset(asset2);
+    }
   };
 
   return (
@@ -120,9 +130,9 @@ export function Portfolio() {
           justifyContent: "center",
         }}
       >
-        <Graph strandingData={strandingData} target={target} />
+        <Graph strandingData={asset} target={target} />
         <div style={{ paddingLeft: "40px" }}>
-          <AssetList />
+          <AssetList callback={setAssetData} />
         </div>
       </Box>
     </div>

@@ -9,7 +9,6 @@ import {
   YAxis,
   ResponsiveContainer,
 } from "recharts";
-import { Box } from "@mui/material";
 import "@fontsource/inter";
 import "@fontsource/lexend";
 import { CustomTooltip } from "./customTooltip";
@@ -40,7 +39,7 @@ export const Graph = (props: {
     } else {
       setData(props.strandingData);
     }
-  }, [props.target]);
+  }, [props.target, props.strandingData]);
 
   return (
     <ResponsiveContainer width="50%" height={269}>

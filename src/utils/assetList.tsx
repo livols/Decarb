@@ -6,7 +6,11 @@ import ListItemText from "@mui/material/ListItemText";
 import { Card, CardContent, Divider, Typography } from "@mui/material";
 import "@fontsource/inter";
 
-export function AssetList() {
+type AssetListProps = {
+  callback: (value: number) => void;
+};
+
+export function AssetList(props: AssetListProps) {
   const properties = [
     { id: 0, name: "Asset" },
     { id: 1, name: "Asset" },
@@ -35,7 +39,11 @@ export function AssetList() {
             const labelId = `label${id}`;
             return (
               <ListItem key={id} disablePadding>
-                <ListItemButton>
+                <ListItemButton
+                  onClick={() => {
+                    props.callback(id);
+                  }}
+                >
                   <ListItemText>{`${id + 1}.`}</ListItemText>
                   <ListItemText id={labelId} primary={`${name}`} />
                 </ListItemButton>
