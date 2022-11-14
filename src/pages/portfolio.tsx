@@ -4,6 +4,7 @@ import { overviewData, strandingData } from "../data/dummy";
 import { useState } from "react";
 import { Box, FormControl, MenuItem, Typography } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { AssetList } from "../utils/assetList";
 
 export function Portfolio() {
   const [target, setTarget] = useState("1");
@@ -85,12 +86,19 @@ export function Portfolio() {
           All Assets
         </Typography>
       </Box>
-      <OverviewGraph
-        strandingData={overviewData}
-        companyName={"PFA"}
-        targetBox
-        target={target}
-      />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <OverviewGraph
+          strandingData={overviewData}
+          companyName={"PFA"}
+          targetBox
+          target={target}
+        />
+      </Box>
       <Box
         sx={{
           display: "flex",
@@ -106,7 +114,17 @@ export function Portfolio() {
           </Typography>
         </div>
       </Box>
-      <Graph strandingData={strandingData} target={target} />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Graph strandingData={strandingData} target={target} />
+        <div style={{ paddingLeft: "40px" }}>
+          <AssetList />
+        </div>
+      </Box>
     </div>
   );
 }
