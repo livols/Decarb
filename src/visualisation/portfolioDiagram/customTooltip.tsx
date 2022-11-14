@@ -1,34 +1,6 @@
 import { Card, CardContent, Typography } from "@mui/material";
 import "@fontsource/inter";
 
-const getIntroOfPage = (label: string) => {
-  if (label === "2036") {
-    return "Excess CO²";
-  }
-  if (label === "2038") {
-    return "Excess CO²";
-  }
-  if (label === "2040") {
-    return "Excess CO²";
-  }
-  if (label === "2042") {
-    return "Excess CO²";
-  }
-  if (label === "2044") {
-    return "Excess CO²";
-  }
-  if (label === "2046") {
-    return "Excess CO²";
-  }
-  if (label === "2048") {
-    return "Excess CO²";
-  }
-  if (label === "2050") {
-    return "Excess CO²";
-  }
-  return null;
-};
-
 export const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
     return (
@@ -44,9 +16,7 @@ export const CustomTooltip = ({ active, payload, label }: any) => {
             component="div"
             gutterBottom
           >
-            {getIntroOfPage(label)
-              ? `${label}: ${getIntroOfPage(label)}`
-              : `${label}`}
+            {label}
           </Typography>
           {payload[1].value - payload[0].value > 0 && (
             <Typography
