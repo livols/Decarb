@@ -13,7 +13,6 @@ import { Box } from "@mui/material";
 import "@fontsource/inter";
 import "@fontsource/lexend";
 import { CustomTooltip } from "./customTooltip";
-import { SelectChangeEvent } from "@mui/material/Select";
 
 type StrandingObjectProps = {
   Year: string;

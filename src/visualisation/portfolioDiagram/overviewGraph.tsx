@@ -9,8 +9,7 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from "recharts";
-import { FormControl, MenuItem, Typography, Box } from "@mui/material";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { Box } from "@mui/material";
 import "@fontsource/inter";
 import "@fontsource/lexend";
 import { CustomTooltip } from "./customTooltip";
