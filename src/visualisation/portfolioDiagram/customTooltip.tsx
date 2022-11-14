@@ -48,6 +48,16 @@ export const CustomTooltip = ({ active, payload, label }: any) => {
               ? `${label}: ${getIntroOfPage(label)}`
               : `${label}`}
           </Typography>
+          {payload[1].value - payload[0].value > 0 && (
+            <Typography
+              sx={{ color: "#0D0D0D", fontFamily: "Inter", fontWeight: "bold" }}
+              variant="caption"
+              component="div"
+              gutterBottom
+            >
+              {`Excess CO²: ${payload[1].value - payload[0].value}`}
+            </Typography>
+          )}
           <Typography
             sx={{ color: "#7A9C6C", fontFamily: "Inter", fontWeight: "bold" }}
             variant="caption"
