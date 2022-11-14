@@ -9,6 +9,7 @@ import { AssetList } from "../utils/assetList";
 
 export function Portfolio() {
   const [target, setTarget] = useState("1");
+  const [id, setId] = useState(1);
   const [asset, setAsset] = useState(asset1);
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -16,6 +17,7 @@ export function Portfolio() {
   };
 
   const setAssetData = (value: number) => {
+    setId(value);
     if (value % 2 === 0) {
       setAsset(asset1);
     } else {
@@ -120,7 +122,7 @@ export function Portfolio() {
             sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
             variant="h4"
           >
-            Asset 1
+            Asset {id + 1}
           </Typography>
         </div>
       </Box>
