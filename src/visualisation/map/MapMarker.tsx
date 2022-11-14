@@ -24,14 +24,18 @@ export default function MapMarker(props: MapMarkerProps) {
     const onHoverClose = () => {
         setShowInfo(false)
     }
-          
+
+    const handleMarkerOnClick = (e: google.maps.MapMouseEvent) => {
+        console.log(props.address)
+    }
+
     return (
         <MarkerF
             onLoad={onLoad}
             position={props.position}
             onMouseOver={onHoverOpen}
             onMouseOut={onHoverClose}
-            //TODO: Add onClick Routing when the page is created
+            onClick={handleMarkerOnClick}
         >
             {showInfo && 
                 <InfoWindow>
