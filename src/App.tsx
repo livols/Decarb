@@ -8,6 +8,14 @@ import { About } from "./pages/about";
 import { Account } from "./pages/account";
 import { Result } from "./pages/result";
 import Layout from "./navigation/sideBar";
+import { Panels } from "./pages/sidebarPages/panels";
+import { OverviewAsset } from "./pages/sidebarPages/overviewAsset";
+import { AssetsExisting } from "./pages/sidebarPages/assetsExisting";
+import { AssetsDefine } from "./pages/sidebarPages/assetsDefine";
+import { RetrofitsExisting } from "./pages/sidebarPages/retrofitsExisting";
+import { RetrofitsDefine } from "./pages/sidebarPages/retrofitsDefine";
+import { ScenariosExisting } from "./pages/sidebarPages/scenariosExisting";
+import { ScenariosDefine } from "./pages/sidebarPages/scenariosDefine";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -18,19 +26,25 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="navBox">
-        {loggedIn && <Layout />}
-        <div style={{width: "100%"}}>
         <Navbar loggedIn={loggedIn} callback={callback} />
-        <Routes>
-          <Route path="/" element={<Product />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/result" element={<Result />} />
-        </Routes>
-      </div>
-      </div>
+        <div className="navBox" style={{height: "100%"}}>
+          {loggedIn && <Layout />}
+          <Routes>
+            <Route path="/" element={<Product />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/result" element={<Result />} />
+            <Route path="/panels" element={<Panels />} />
+            <Route path="/asset" element={<OverviewAsset />} />
+            <Route path="/assetsExisting" element={<AssetsExisting />} />
+            <Route path="/assetsDefine" element={<AssetsDefine />} />
+            <Route path="/retrofitsExisting" element={<RetrofitsExisting />} />
+            <Route path="/retrofitsDefine" element={<RetrofitsDefine />} />
+            <Route path="/scenariosExisting" element={<ScenariosExisting />} />
+            <Route path="/scenariosDefine" element={<ScenariosDefine />} />
+          </Routes>
+        </div>
     </BrowserRouter>
   );
 }

@@ -1,3 +1,7 @@
+html, body, #root, #root>div {
+    height: 100%
+}
+
 .container{
     display: flex;
     /*flex-direction: column;
@@ -58,4 +62,17 @@
 .navBox {
     display:flex;
     flex-direction: row;
+    height: 100%;
+}
+
+.menu .menu-item {
+    color: "#0D0D0D";
+    font-family: Inter;
+    font-size: 14px;
+}
+
+.menu .menu-anchor {
+    color: "#0D0D0D";
+    font-family: Inter;
+    font-size: 14px;
 }

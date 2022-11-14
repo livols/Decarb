@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material'
-import { InfoBox, InfoWindow, MarkerF } from '@react-google-maps/api'
+import { InfoWindow, MarkerF } from '@react-google-maps/api'
 import React, { useState } from 'react'
 
 type MapMarkerProps = {
