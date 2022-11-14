@@ -50,7 +50,7 @@ export const CustomTooltip = ({ active, payload, label }: any) => {
           </Typography>
           {payload[1].value - payload[0].value > 0 && (
             <Typography
-              sx={{ color: "#0D0D0D", fontFamily: "Inter", fontWeight: "bold" }}
+              sx={{ color: "#d01a1a", fontFamily: "Inter", fontWeight: "bold" }}
               variant="caption"
               component="div"
               gutterBottom
