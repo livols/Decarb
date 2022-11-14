@@ -101,25 +101,25 @@ export const asset2 = [
   {
     Year: "2020",
     Baseline: 65,
-    Decarbonisation: 85,
+    Decarbonisation: 75,
     Emission: 65,
   },
   {
     Year: "2022",
     Baseline: 65,
-    Decarbonisation: 88,
+    Decarbonisation: 72,
     Emission: 65,
   },
   {
     Year: "2024",
     Baseline: 65,
-    Decarbonisation: 83,
+    Decarbonisation: 70,
     Emission: 65,
   },
   {
     Year: "2026",
-    Baseline: 38,
-    Decarbonisation: 85,
+    Baseline: 65,
+    Decarbonisation: 65,
     Emission: 65,
   },
   {
