@@ -2,7 +2,7 @@ import { Graph } from "../visualisation/strandingDiagram/graph";
 import { OverviewGraph } from "../visualisation/portfolioDiagram/overviewGraph";
 import { overviewData } from "../data/overview";
 import { asset1, asset2 } from "../data/assets";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Box, FormControl, MenuItem, Typography } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { AssetList } from "../utils/assetList";
