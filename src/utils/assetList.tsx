@@ -3,7 +3,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import { Card, CardContent, Divider, Typography, Button } from "@mui/material";
+import { Card, CardContent, Divider, Button } from "@mui/material";
 import "@fontsource/inter";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
