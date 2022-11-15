@@ -25,7 +25,7 @@ export const CustomTooltip = ({ active, payload, label }: any) => {
               component="div"
               gutterBottom
             >
-              {`Excess CO²: ${payload[1].value - payload[0].value}`}
+              {`Excess CO₂: ${payload[1].value - payload[0].value}`}
             </Typography>
           )}
           <Typography
