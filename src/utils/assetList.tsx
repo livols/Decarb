@@ -3,39 +3,67 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import { Card, CardContent, Divider, Typography } from "@mui/material";
+import { Card, CardContent, Divider, Typography, Button } from "@mui/material";
 import "@fontsource/inter";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { useState } from "react";
 
 type AssetListProps = {
   callback: (value: number) => void;
 };
 
+const BottomProperties = [
+  { id: 0, name: "Bottom asset" },
+  { id: 1, name: "Bottom asset" },
+  { id: 2, name: "Bottom asset" },
+  { id: 3, name: "Bottom asset" },
+  { id: 4, name: "Bottom asset" },
+];
+
+const TopProperties = [
+  { id: 0, name: "Top asset" },
+  { id: 1, name: "Top asset" },
+  { id: 2, name: "Top asset" },
+  { id: 3, name: "Top asset" },
+  { id: 4, name: "Top asset" },
+];
+
 export function AssetList(props: AssetListProps) {
-  const properties = [
-    { id: 0, name: "Asset" },
-    { id: 1, name: "Asset" },
-    { id: 2, name: "Asset" },
-    { id: 3, name: "Asset" },
-    { id: 4, name: "Asset" },
-  ];
+  const [value, setValue] = useState("Bottom");
+  const [data, setData] = useState(BottomProperties);
+
+  const handleClick = () => {
+    if (value === "Bottom") {
+      setValue("Top");
+      setData(TopProperties);
+    } else {
+      setValue("Bottom");
+      setData(BottomProperties);
+    }
+  };
+
   return (
     <Card sx={{ maxWidth: 250 }}>
       <CardContent>
-        <Typography
+        <Button
+          startIcon={
+            value === "Bottom" ? <ArrowDownwardIcon /> : <ArrowUpwardIcon />
+          }
           sx={{
             color: "#0D0D0D",
             fontFamily: "Inter",
             fontWeight: "bold",
             textAlign: "center",
-            paddingBottom: "8px",
+            textTransform: "none",
           }}
-          variant="body2"
+          onClick={() => handleClick()}
         >
-          Bottom 5 properties
-        </Typography>
-        <Divider />
+          {value === "Bottom" ? "Bottom 5 properties" : "Top 5 properties"}
+        </Button>
+        <Divider sx={{ paddingTop: "8px" }} />
         <List dense sx={{ maxWidth: 250 }}>
-          {properties.map(({ id, name }) => {
+          {data.map(({ id, name }) => {
             const labelId = `label${id}`;
             return (
               <ListItem key={id} disablePadding>
