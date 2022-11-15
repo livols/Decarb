@@ -42,7 +42,7 @@ export const OverviewGraph = (props: {
   }, [props.target]);
 
   return (
-    <ResponsiveContainer width="60%" height={269}>
+    <ResponsiveContainer width="50%" height={269}>
       <AreaChart
         data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

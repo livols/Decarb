@@ -3,9 +3,10 @@ import { OverviewGraph } from "../visualisation/portfolioDiagram/overviewGraph";
 import { overviewData } from "../data/overview";
 import { asset1, asset2 } from "../data/assets";
 import { useState } from "react";
-import { Box, FormControl, MenuItem, Typography } from "@mui/material";
+import { FormControl, MenuItem, Typography } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { AssetList } from "../utils/assetList";
+import Box from "@mui/material/Box";
 
 export function Portfolio() {
   const [target, setTarget] = useState("1");
@@ -46,10 +47,29 @@ export function Portfolio() {
         sx={{
           display: "flex",
           justifyContent: "center",
-          paddingTop: "15px",
+          paddingTop: "35px",
         }}
       >
-        <FormControl sx={{ m: 1, minWidth: 50 }}>
+        <Typography
+          sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
+          variant="h5"
+        >
+          Overview of all assets
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <OverviewGraph
+          strandingData={overviewData}
+          companyName={"PFA"}
+          targetBox
+          target={target}
+        />
+        <FormControl sx={{ m: 1, minWidth: 50, paddingTop: "50px" }}>
           <Typography
             sx={{ color: "#0D0D0D", fontFamily: "Inter" }}
             variant="caption"
@@ -88,52 +108,25 @@ export function Portfolio() {
         sx={{
           display: "flex",
           justifyContent: "center",
-          paddingTop: "25px",
+          paddingTop: "35px",
         }}
       >
         <Typography
           sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
           variant="h5"
         >
-          Overview of all assets
+          Asset {id + 1}
         </Typography>
       </Box>
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
-        }}
-      >
-        <OverviewGraph
-          strandingData={overviewData}
-          companyName={"PFA"}
-          targetBox
-          target={target}
-        />
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ paddingTop: "40px" }}>
-          <Typography
-            sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
-            variant="h5"
-          >
-            Asset {id + 1}
-          </Typography>
-        </div>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
+          paddingLeft: "15px",
         }}
       >
         <Graph strandingData={asset} target={target} />
-        <div style={{ paddingLeft: "40px" }}>
+        <div style={{ paddingLeft: "15px" }}>
           <AssetList callback={setAssetData} />
         </div>
       </Box>
