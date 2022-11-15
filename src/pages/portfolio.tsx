@@ -7,6 +7,7 @@ import { FormControl, MenuItem, Typography } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { AssetList } from "../utils/assetList";
 import Box from "@mui/material/Box";
+import OverviewTable from "../utils/overviewTable";
 
 export function Portfolio() {
   const [target, setTarget] = useState("1");
@@ -129,6 +130,15 @@ export function Portfolio() {
         <div style={{ paddingLeft: "15px" }}>
           <AssetList callback={setAssetData} />
         </div>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "35px",
+        }}
+      >
+        <OverviewTable />
       </Box>
     </div>
   );
