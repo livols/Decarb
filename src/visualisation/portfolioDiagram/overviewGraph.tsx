@@ -47,12 +47,6 @@ export const OverviewGraph = (props: {
         data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
       >
-        <defs>
-          <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#7A9C6C" stopOpacity={0.8} />
-            <stop offset="95%" stopColor="#7A9C6C" stopOpacity={0} />
-          </linearGradient>
-        </defs>
         <XAxis dataKey="Year" stroke="#A2A3A5" />
         <YAxis
           label={{
@@ -72,9 +66,8 @@ export const OverviewGraph = (props: {
           dataKey="Decarbonisation"
           name="Sector decarbonisation target"
           stroke="#7A9C6C"
-          fillOpacity={1}
+          fill="transparent"
           strokeWidth={2}
-          fill="url(#colorPv)"
         />
         <Area
           dataKey="Emission"
