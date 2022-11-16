@@ -20,7 +20,7 @@ type StrandingObjectProps = {
   Emission: number;
 };
 
-export const Graph = (props: {
+export const StrandingGraph = (props: {
   strandingData: StrandingObjectProps[];
   target: string;
 }) => {

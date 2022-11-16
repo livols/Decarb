@@ -1,4 +1,4 @@
-import { Graph } from "../visualisation/strandingDiagram/graph";
+import { StrandingGraph } from "../visualisation/strandingDiagram/strandingGraph";
 import { OverviewGraph } from "../visualisation/portfolioDiagram/overviewGraph";
 import { overviewData } from "../data/overview";
 import { asset1, asset2 } from "../data/assets";
@@ -126,7 +126,7 @@ export function Portfolio() {
           paddingLeft: "15px",
         }}
       >
-        <Graph strandingData={asset} target={target} />
+        <StrandingGraph strandingData={asset} target={target} />
         <div style={{ paddingLeft: "15px" }}>
           <AssetList callback={setAssetData} />
         </div>
