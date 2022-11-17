@@ -66,7 +66,7 @@ export const StrandingGraph = (props: {
         />
         <CartesianGrid vertical={false} />
         <Tooltip content={<CustomTooltip />} />
-        <Legend verticalAlign="bottom" height={36} />
+        <Legend verticalAlign="bottom" height={36} iconType="plainline" />
         <Area
           dataKey="Baseline"
           name="Baseline carbon performance of asset"

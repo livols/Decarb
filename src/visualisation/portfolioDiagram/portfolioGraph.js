@@ -113,7 +113,7 @@ export const PortfolioGraph = (props) => {
         </defs>
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip content={<CustomTooltip />} />
-        <Legend verticalAlign="bottom" height={36} />
+        <Legend verticalAlign="bottom" height={36} iconType="plainline" />
         <XAxis dataKey="Year" stroke="#A2A3A5" />
         <YAxis
           tickCount={5}
