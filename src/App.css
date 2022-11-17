@@ -76,3 +76,7 @@ html, body, #root, #root>div {
     font-family: Inter;
     font-size: 14px;
 }
+
+.sidebar-inner {
+    border-top: 1px solid #efefef;
+}

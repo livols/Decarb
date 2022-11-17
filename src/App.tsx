@@ -16,6 +16,7 @@ import { RetrofitsExisting } from "./pages/sidebarPages/retrofitsExisting";
 import { RetrofitsDefine } from "./pages/sidebarPages/retrofitsDefine";
 import { ScenariosExisting } from "./pages/sidebarPages/scenariosExisting";
 import { ScenariosDefine } from "./pages/sidebarPages/scenariosDefine";
+import { Calculations } from "./pages/mapRedirectPage";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -43,6 +44,7 @@ function App() {
             <Route path="/retrofitsDefine" element={<RetrofitsDefine />} />
             <Route path="/scenariosExisting" element={<ScenariosExisting />} />
             <Route path="/scenariosDefine" element={<ScenariosDefine />} />
+            <Route path="/calculations" element={<Calculations />} />
           </Routes>
         </div>
     </BrowserRouter>
