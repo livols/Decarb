@@ -8,38 +8,46 @@ import "@fontsource/inter";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { useState } from "react";
+import { properties } from "../data/properties";
 
 type AssetListProps = {
   callback: (value: number) => void;
 };
 
-const BottomProperties = [
-  { id: 0, name: "Bottom asset" },
-  { id: 1, name: "Bottom asset" },
-  { id: 2, name: "Bottom asset" },
-  { id: 3, name: "Bottom asset" },
-  { id: 4, name: "Bottom asset" },
-];
-
-const TopProperties = [
-  { id: 0, name: "Top asset" },
-  { id: 1, name: "Top asset" },
-  { id: 2, name: "Top asset" },
-  { id: 3, name: "Top asset" },
-  { id: 4, name: "Top asset" },
-];
-
 export function AssetList(props: AssetListProps) {
   const [value, setValue] = useState("Bottom");
-  const [data, setData] = useState(BottomProperties);
+
+  const propertiesDescending = [...properties].sort(
+    (a, b) => b.emission - a.emission
+  );
+
+  const propertiesAscending = [...properties].sort(
+    (a, b) => a.emission - b.emission
+  );
+
+  const bottom = propertiesDescending
+    .filter((item, index) => index < 5)
+    .map((filteredItem, index) => ({
+      id: index,
+      name: filteredItem.name,
+    }));
+
+  const top = propertiesAscending
+    .filter((item, index) => index < 5)
+    .map((filteredItem, index) => ({
+      id: index,
+      name: filteredItem.name,
+    }));
+
+  const [data, setData] = useState(bottom);
 
   const handleClick = () => {
     if (value === "Bottom") {
       setValue("Top");
-      setData(TopProperties);
+      setData(top);
     } else {
       setValue("Bottom");
-      setData(BottomProperties);
+      setData(bottom);
     }
   };
 
@@ -64,7 +72,6 @@ export function AssetList(props: AssetListProps) {
         <Divider sx={{ paddingTop: "8px" }} />
         <List dense sx={{ maxWidth: 250 }}>
           {data.map(({ id, name }) => {
-            const labelId = `label${id}`;
             return (
               <ListItem key={id} disablePadding>
                 <ListItemButton
@@ -72,8 +79,9 @@ export function AssetList(props: AssetListProps) {
                     props.callback(id);
                   }}
                 >
-                  <ListItemText>{`${id + 1}.`}</ListItemText>
-                  <ListItemText id={labelId} primary={`${name}`} />
+                  <ListItemText primaryTypographyProps={{ fontSize: "12px" }}>
+                    {`${id + 1}.`} {`${name}`}
+                  </ListItemText>
                 </ListItemButton>
               </ListItem>
             );
