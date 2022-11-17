@@ -18,14 +18,14 @@ export const CustomTooltip = ({ active, payload, label }: any) => {
           >
             {label}
           </Typography>
-          {payload[1].value - payload[0].value > 0 && (
+          {payload[1].value - payload[0].value[1] > 0 && (
             <Typography
               sx={{ color: "#d01a1a", fontFamily: "Inter", fontWeight: "bold" }}
               variant="caption"
               component="div"
               gutterBottom
             >
-              {`Excess CO₂: ${payload[1].value - payload[0].value}`}
+              {`Excess CO₂: ${payload[1].value - payload[0].value[1]}`}
             </Typography>
           )}
           <Typography
@@ -34,7 +34,7 @@ export const CustomTooltip = ({ active, payload, label }: any) => {
             component="div"
             gutterBottom
           >
-            {`Sector decarbonisation: ${payload[0].value}`}
+            {`Sector decarbonisation: ${payload[0].value[1]}`}
           </Typography>
           <Typography
             sx={{ color: "#6B7280", fontFamily: "Inter", fontWeight: "bold" }}
