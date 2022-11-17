@@ -128,7 +128,12 @@ export const PortfolioGraph = (props) => {
           }}
           stroke="#A2A3A5"
         />
-        <Area dataKey="range" fill={`url(#${id})`} />
+        <Area
+          dataKey="range"
+          name="Excess CO₂"
+          fill={`url(#${id})`}
+          stroke="#d54747"
+        />
         <Line
           type="monotone"
           dataKey="Emission"
