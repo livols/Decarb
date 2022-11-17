@@ -51,7 +51,7 @@ export const PortfolioGraph = (props) => {
   );
 
   return (
-    <ResponsiveContainer width="50%" height={269}>
+    <ResponsiveContainer width="54%" height={269}>
       <ComposedChart
         data={dataWithRange}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
