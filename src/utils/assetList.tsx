@@ -11,7 +11,7 @@ import { useState } from "react";
 import { properties } from "../data/properties";
 
 type AssetListProps = {
-  callback: (value: number) => void;
+  callback: (value: number, name: string) => void;
 };
 
 export function AssetList(props: AssetListProps) {
@@ -76,7 +76,7 @@ export function AssetList(props: AssetListProps) {
               <ListItem key={id} disablePadding>
                 <ListItemButton
                   onClick={() => {
-                    props.callback(id);
+                    props.callback(id, name);
                   }}
                 >
                   <ListItemText primaryTypographyProps={{ fontSize: "12px" }}>

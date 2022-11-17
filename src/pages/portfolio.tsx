@@ -11,16 +11,16 @@ import { PortfolioGraph } from "../visualisation/portfolioDiagram/portfolioGraph
 
 export function Portfolio() {
   const [target, setTarget] = useState("1");
-  const [id, setId] = useState(1);
   const [asset, setAsset] = useState(asset1);
+  const [assetName, setAssetName] = useState("Bella Center");
   const [data, setData] = useState(overviewData);
 
   const handleChange = (event: SelectChangeEvent) => {
     setTarget(event.target.value);
   };
 
-  const setAssetData = (value: number) => {
-    setId(value);
+  const setAssetData = (value: number, name: string) => {
+    setAssetName(name);
     if (value % 2 === 0) {
       setAsset(asset1);
     } else {
@@ -126,7 +126,7 @@ export function Portfolio() {
           sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
           variant="h5"
         >
-          Asset {id + 1}
+          {assetName}
         </Typography>
       </Box>
       <Box
