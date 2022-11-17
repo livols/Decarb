@@ -1,18 +1,19 @@
 import { StrandingGraph } from "../visualisation/strandingDiagram/strandingGraph";
-import { OverviewGraph } from "../visualisation/portfolioDiagram/overviewGraph";
 import { overviewData } from "../data/overview";
 import { asset1, asset2 } from "../data/assets";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FormControl, MenuItem, Typography } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { AssetList } from "../utils/assetList";
 import Box from "@mui/material/Box";
 import OverviewTable from "../utils/overviewTable";
+import { PortfolioGraph } from "../visualisation/portfolioDiagram/portfolioGraph";
 
 export function Portfolio() {
   const [target, setTarget] = useState("1");
   const [id, setId] = useState(1);
   const [asset, setAsset] = useState(asset1);
+  const [data, setData] = useState(overviewData);
 
   const handleChange = (event: SelectChangeEvent) => {
     setTarget(event.target.value);
@@ -26,6 +27,20 @@ export function Portfolio() {
       setAsset(asset2);
     }
   };
+
+  const overviewData2 = overviewData.map((element: any) => ({
+    ...element,
+    Decarbonisation: element.Decarbonisation + 10,
+    Emission: element.Emission + 10,
+  }));
+
+  useEffect(() => {
+    if (target === "1") {
+      setData(overviewData2);
+    } else {
+      setData(overviewData);
+    }
+  }, [target]);
 
   return (
     <div>
@@ -64,12 +79,7 @@ export function Portfolio() {
           justifyContent: "center",
         }}
       >
-        <OverviewGraph
-          strandingData={overviewData}
-          companyName={"PFA"}
-          targetBox
-          target={target}
-        />
+        <PortfolioGraph data={data} id={"4"} />
         <FormControl sx={{ m: 1, minWidth: 50, paddingTop: "50px" }}>
           <Typography
             sx={{ color: "#0D0D0D", fontFamily: "Inter" }}

@@ -12,16 +12,8 @@ import {
 } from "recharts";
 import { CustomTooltip } from "./customTooltip";
 
-const getIntersectionColor = (_intersection, isLast) => {
-  if (isLast) {
-    return _intersection.line1isHigherNext ? "#d01a1a" : "transparent";
-  }
-
-  return _intersection.line1isHigher ? "#d01a1a" : "transparent";
-};
-
 export const PortfolioGraph = (props) => {
-  const { data, id, target } = props;
+  const { data, id } = props;
 
   const dataWithRange = data.map((d) => ({
     ...d,
@@ -30,6 +22,14 @@ export const PortfolioGraph = (props) => {
         ? [d.Emission, d.Decarbonisation]
         : [],
   }));
+
+  const getIntersectionColor = (_intersection, isLast) => {
+    if (isLast) {
+      return _intersection.line1isHigherNext ? "#d01a1a" : "transparent";
+    }
+
+    return _intersection.line1isHigher ? "#d01a1a" : "transparent";
+  };
 
   const intersections = data
     .map((d, i) =>
