@@ -1,12 +1,28 @@
-import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import React, { useState } from "react";
+import {
+  Sidebar,
+  Menu,
+  MenuItem,
+  SubMenu,
+  useProSidebar,
+} from "react-pro-sidebar";
 import { Link } from "react-router-dom";
+import { FiArrowLeftCircle, FiArrowRightCircle  } from "react-icons/fi";
 
 export default function Layout() {
+  const [sideCollapsed, setSideCollapsed] = useState(false);
+  const { collapseSidebar } = useProSidebar();
+  const toggleSideCollapsed = () => {
+    console.log("toggle");
+    setSideCollapsed((collapsed) => !collapsed);
+    collapseSidebar();
+  };
+
   return (
     <div style={{ display: "flex", height: "100%" }}>
-      <Sidebar>
+      <Sidebar collapsedWidth="100px">
         <Menu>
-          <MenuItem> PFA</MenuItem>
+          <MenuItem onClick={toggleSideCollapsed}>PFA <span className="sidebarCollapseIcon">{sideCollapsed ? <FiArrowRightCircle className="rightArrowCollapse" size={18} /> : <FiArrowLeftCircle size={18} />}</span></MenuItem>
           <SubMenu label="Overview">
             <MenuItem routerLink={<Link to="/panels" />}> Panels</MenuItem>
             <MenuItem routerLink={<Link to="/asset" />}> Asset</MenuItem>
@@ -15,9 +31,7 @@ export default function Layout() {
             <MenuItem routerLink={<Link to="/assetsExisting" />}>
               Existing
             </MenuItem>
-            <MenuItem routerLink={<Link to="/assetsDefine" />}>
-              Define
-            </MenuItem>
+            <MenuItem routerLink={<Link to="/assetsDefine" />}>Define</MenuItem>
           </SubMenu>
           <SubMenu label="Retrofits">
             <MenuItem routerLink={<Link to="/retrofitsExisting" />}>
