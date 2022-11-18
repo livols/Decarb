@@ -27,26 +27,23 @@ function App() {
 
   return (
     <BrowserRouter>
-        <Navbar loggedIn={loggedIn} callback={callback} />
-        <div className="navBox" style={{height: "100%"}}>
-          {loggedIn && <Layout />}
-          <Routes>
-            <Route path="/" element={<Product />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/account" element={<Account />} />
-            <Route path="/result" element={<Result />} />
-            <Route path="/panels" element={<Panels />} />
-            <Route path="/asset" element={<OverviewAsset />} />
-            <Route path="/assetsExisting" element={<AssetsExisting />} />
-            <Route path="/assetsDefine" element={<AssetsDefine />} />
-            <Route path="/retrofitsExisting" element={<RetrofitsExisting />} />
-            <Route path="/retrofitsDefine" element={<RetrofitsDefine />} />
-            <Route path="/scenariosExisting" element={<ScenariosExisting />} />
-            <Route path="/scenariosDefine" element={<ScenariosDefine />} />
-            <Route path="/calculations" element={<Calculations />} />
-          </Routes>
-        </div>
+        <Navbar loggedIn={loggedIn} callback={callback} />  
+        <Routes>
+          <Route path="/" element={<Product />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/result" element={Result(loggedIn)} />
+          <Route path="/panels" element={<Panels />} />
+          <Route path="/asset" element={<OverviewAsset />} />
+          <Route path="/assetsExisting" element={<AssetsExisting />} />
+          <Route path="/assetsDefine" element={<AssetsDefine />} />
+          <Route path="/retrofitsExisting" element={<RetrofitsExisting />} />
+          <Route path="/retrofitsDefine" element={<RetrofitsDefine />} />
+          <Route path="/scenariosExisting" element={<ScenariosExisting />} />
+          <Route path="/scenariosDefine" element={<ScenariosDefine />} />
+          <Route path="/calculations" element={<Calculations />} />
+        </Routes>
     </BrowserRouter>
   );
 }
