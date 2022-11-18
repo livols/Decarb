@@ -28,7 +28,7 @@ const pages = [
 
 const settings = [
   { text: "Account", href: "/account" },
-  { text: "Result", href: "/result" },
+  { text: "Portfolio", href: "/portfolio" },
   { text: "Logout", href: "/" },
 ];
 
@@ -91,7 +91,7 @@ function Navbar(props: NavbarProps) {
               textDecoration: "none",
             }}
           >
-            Orkurík
+            Unisphere
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

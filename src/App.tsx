@@ -6,7 +6,7 @@ import { Product } from "./pages/product";
 import { Pricing } from "./pages/pricing";
 import { About } from "./pages/about";
 import { Account } from "./pages/account";
-import { Result } from "./pages/result";
+import { Portfolio } from "./pages/portfolio";
 import Layout from "./navigation/sideBar";
 import { Panels } from "./pages/sidebarPages/panels";
 import { OverviewAsset } from "./pages/sidebarPages/overviewAsset";
@@ -27,13 +27,13 @@ function App() {
 
   return (
     <BrowserRouter>
-        <Navbar loggedIn={loggedIn} callback={callback} />  
+        <Navbar loggedIn={loggedIn} callback={callback} />
         <Routes>
           <Route path="/" element={<Product />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/account" element={<Account />} />
-          <Route path="/result" element={Result(loggedIn)} />
+          <Route path="/portfolio" element={Portfolio(loggedIn)} />
           <Route path="/panels" element={<Panels />} />
           <Route path="/asset" element={<OverviewAsset />} />
           <Route path="/assetsExisting" element={<AssetsExisting />} />
