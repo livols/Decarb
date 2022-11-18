@@ -158,10 +158,23 @@ export function Portfolio() {
           paddingTop: "35px",
         }}
       >
+        <Typography
+          sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
+          variant="h5"
+        >
+          Asset overview on google maps
+        </Typography>
+      </Box>
+      {/*<Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <div style={{ width: "62%", height: "700px" }}>
           <SimpleMap />
         </div>
-      </Box>
+      </Box>*/}
     </div>
   );
 }
