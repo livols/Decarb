@@ -30,7 +30,7 @@ function App() {
     <BrowserRouter>
         <Navbar loggedIn={loggedIn} callback={callback} />
         <Routes>
-          <Route path="/xtech/product" element={<Product />} />
+          <Route path="/xtech" element={<Product />} />
           <Route path="/xtech/pricing" element={<Pricing />} />
           <Route path="/xtech/about" element={<About />} />
           <Route path="/xtech/account" element={<Account />} />

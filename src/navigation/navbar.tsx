@@ -21,7 +21,7 @@ type NavbarProps = {
 };
 
 const pages = [
-  { text: "Product", href: "/xtech/product" },
+  { text: "Product", href: "/xtech" },
   { text: "Pricing", href: "/xtech/pricing" },
   { text: "About us", href: "/xtech/about" },
 ];
@@ -29,7 +29,7 @@ const pages = [
 const settings = [
   { text: "Account", href: "/xtech/account" },
   { text: "Portfolio", href: "/xtech/portfolio" },
-  { text: "Logout", href: "/xtech/product" },
+  { text: "Logout", href: "/xtech" },
 ];
 
 function Navbar(props: NavbarProps) {
