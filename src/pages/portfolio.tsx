@@ -64,7 +64,7 @@ export function Portfolio(loggedIn: boolean) {
               }}
               variant="h4"
             >
-              PFA property portfolio
+              PFA Property Portfolio
             </Typography>
           </div>
         </Box>
@@ -173,16 +173,16 @@ export function Portfolio(loggedIn: boolean) {
             Asset overview on google maps
           </Typography>
         </Box>
-        {/*<Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ width: "62%", height: "700px" }}>
-          <SimpleMap />
-        </div>
-      </Box>*/}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{ width: "62%", height: "700px" }}>
+            <SimpleMap />
+          </div>
+        </Box>
       </div>
     </div>
   );
