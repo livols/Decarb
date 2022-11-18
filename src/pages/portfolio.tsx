@@ -10,7 +10,9 @@ import OverviewTable from "../utils/overviewTable";
 import { PortfolioGraph } from "../visualisation/portfolioDiagram/portfolioGraph";
 import SimpleMap from "../visualisation/map/map";
 
-export function Portfolio() {
+import Layout from "../navigation/sideBar";
+
+export function Portfolio(loggedIn: boolean) {
   const [target, setTarget] = useState("1");
   const [asset, setAsset] = useState(asset1);
   const [assetName, setAssetName] = useState("Bella Center");
@@ -44,128 +46,134 @@ export function Portfolio() {
   }, [target]);
 
   return (
-    <div>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ paddingTop: "10px" }}>
+    <div className="navBox" style={{ height: "100%" }}>
+      {loggedIn && <Layout />}
+      <div style={{ marginLeft: "2%", width: "100%" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{ paddingTop: "10px" }}>
+            <Typography
+              sx={{
+                color: "#0D0D0D",
+                fontFamily: "Lexend",
+                fontWeight: "bold",
+              }}
+              variant="h4"
+            >
+              PFA property portfolio
+            </Typography>
+          </div>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "35px",
+          }}
+        >
           <Typography
             sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
-            variant="h4"
+            variant="h5"
           >
-            PFA property portfolio
+            Overview of all assets
           </Typography>
-        </div>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          paddingTop: "35px",
-        }}
-      >
-        <Typography
-          sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
-          variant="h5"
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
         >
-          Overview of all assets
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <PortfolioGraph data={data} id={"4"} />
-        <FormControl sx={{ m: 1, minWidth: 50, paddingTop: "50px" }}>
+          <PortfolioGraph data={data} id={"4"} />
+          <FormControl sx={{ m: 1, minWidth: 50, paddingTop: "50px" }}>
+            <Typography
+              sx={{ color: "#0D0D0D", fontFamily: "Inter" }}
+              variant="caption"
+            >
+              Global warming target
+            </Typography>
+            <Select
+              sx={{
+                borderColor: "#A2A3A5",
+                "&:hover": {
+                  "&& fieldset": {
+                    border: "1px solid #7A9C6C",
+                  },
+                },
+                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                  border: "2px solid #7A9C6C",
+                },
+              }}
+              value={target}
+              onChange={handleChange}
+              displayEmpty
+              MenuProps={{
+                sx: {
+                  "&& .Mui-selected": {
+                    backgroundColor: "#A4C099",
+                  },
+                },
+              }}
+            >
+              <MenuItem value={"1"}>1.5°C</MenuItem>
+              <MenuItem value={"2"}>2°C</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "35px",
+          }}
+        >
           <Typography
-            sx={{ color: "#0D0D0D", fontFamily: "Inter" }}
-            variant="caption"
+            sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
+            variant="h5"
           >
-            Global warming target
+            {assetName}
           </Typography>
-          <Select
-            sx={{
-              borderColor: "#A2A3A5",
-              "&:hover": {
-                "&& fieldset": {
-                  border: "1px solid #7A9C6C",
-                },
-              },
-              "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                border: "2px solid #7A9C6C",
-              },
-            }}
-            value={target}
-            onChange={handleChange}
-            displayEmpty
-            MenuProps={{
-              sx: {
-                "&& .Mui-selected": {
-                  backgroundColor: "#A4C099",
-                },
-              },
-            }}
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            paddingLeft: "15px",
+          }}
+        >
+          <StrandingGraph strandingData={asset} target={target} />
+          <div style={{ paddingLeft: "15px" }}>
+            <AssetList callback={setAssetData} />
+          </div>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "35px",
+          }}
+        >
+          <OverviewTable />
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "35px",
+          }}
+        >
+          <Typography
+            sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
+            variant="h5"
           >
-            <MenuItem value={"1"}>1.5°C</MenuItem>
-            <MenuItem value={"2"}>2°C</MenuItem>
-          </Select>
-        </FormControl>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          paddingTop: "35px",
-        }}
-      >
-        <Typography
-          sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
-          variant="h5"
-        >
-          {assetName}
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          paddingLeft: "15px",
-        }}
-      >
-        <StrandingGraph strandingData={asset} target={target} />
-        <div style={{ paddingLeft: "15px" }}>
-          <AssetList callback={setAssetData} />
-        </div>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          paddingTop: "35px",
-        }}
-      >
-        <OverviewTable />
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          paddingTop: "35px",
-        }}
-      >
-        <Typography
-          sx={{ color: "#0D0D0D", fontFamily: "Lexend", fontWeight: "bold" }}
-          variant="h5"
-        >
-          Asset overview on google maps
-        </Typography>
-      </Box>
-      {/*<Box
+            Asset overview on google maps
+          </Typography>
+        </Box>
+        {/*<Box
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -175,6 +183,7 @@ export function Portfolio() {
           <SimpleMap />
         </div>
       </Box>*/}
+      </div>
     </div>
   );
 }
