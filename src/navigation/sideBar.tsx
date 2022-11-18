@@ -24,29 +24,37 @@ export default function Layout() {
         <Menu>
           <MenuItem onClick={toggleSideCollapsed}>PFA <span className="sidebarCollapseIcon">{sideCollapsed ? <FiArrowRightCircle className="rightArrowCollapse" size={18} /> : <FiArrowLeftCircle size={18} />}</span></MenuItem>
           <SubMenu label="Overview">
-            <MenuItem routerLink={<Link to="/panels" />}> Panels</MenuItem>
-            <MenuItem routerLink={<Link to="/asset" />}> Asset</MenuItem>
+            <MenuItem routerLink={<Link to="/xtech/panels" />}> Panels</MenuItem>
+            <MenuItem routerLink={<Link to="/xtech/asset" />}> Asset</MenuItem>
           </SubMenu>
           <SubMenu label="Assets">
-            <MenuItem routerLink={<Link to="/assetsExisting" />}>
+            <MenuItem routerLink={<Link to="/xtech/assetsExisting" />}>
               Existing
             </MenuItem>
-            <MenuItem routerLink={<Link to="/assetsDefine" />}>Define</MenuItem>
+            <MenuItem routerLink={<Link to="/xtech/assetsDefine" />}>Define</MenuItem>
           </SubMenu>
           <SubMenu label="Retrofits">
-            <MenuItem routerLink={<Link to="/retrofitsExisting" />}>
+            <MenuItem routerLink={<Link to="/xtech/retrofitsExisting" />}>
               Existing
             </MenuItem>
-            <MenuItem routerLink={<Link to="/retrofitsDefine" />}>
+            <MenuItem routerLink={<Link to="/xtech/retrofitsDefine" />}>
               Define
             </MenuItem>
           </SubMenu>
           <SubMenu label="Scenarios">
-            <MenuItem routerLink={<Link to="/scenariosExisting" />}>
+            <MenuItem routerLink={<Link to="/xtech/scenariosExisting" />}>
               Existing
             </MenuItem>
-            <MenuItem routerLink={<Link to="/scenariosDefine" />}>
+            <MenuItem routerLink={<Link to="/xtech/scenariosDefine" />}>
               Define
+            </MenuItem>
+          </SubMenu>
+          <SubMenu label="Reports">
+            <MenuItem routerLink={<Link to="/xtech/euReports" />}>
+              EU Reports
+            </MenuItem>
+            <MenuItem routerLink={<Link to="/xtech/quarterlyReports" />}>
+              Quarterly Report
             </MenuItem>
           </SubMenu>
         </Menu>

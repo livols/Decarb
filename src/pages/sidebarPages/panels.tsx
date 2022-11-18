@@ -1,11 +1,11 @@
-import SimpleMap from "../../visualisation/map/map";
+import Layout from "../../navigation/sideBar";
 
-export function Panels() {
+export function Panels(loggedIn: boolean) {
   return (
-    <div style={{ marginLeft: "2%", width: "100%" }}>
-      <h2>PFA Portfolio</h2>
-      <div style={{ width: "100%", height: "500px" }}>
-        <SimpleMap />
+    <div className="navBox" style={{ height: "100%" }}>
+      {loggedIn && <Layout />}
+      <div style={{ marginLeft: "2%" }}>
+        <h2>Panels</h2>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
   "name": "orkurik",
   "version": "0.1.1",
   "private": true,
-  "homepage":"https://livols.github.io",
+  "homepage":"https://livols.github.io/xtech/",
   "dependencies": {
     "-": "^0.0.1",
     "@emotion/react": "^11.10.4",
