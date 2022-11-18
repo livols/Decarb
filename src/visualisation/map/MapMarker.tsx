@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material'
-import { InfoBox, InfoWindow, MarkerF } from '@react-google-maps/api'
+import { InfoWindow, MarkerF } from '@react-google-maps/api'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 type MapMarkerProps = {
     position: {
@@ -15,6 +16,7 @@ const onLoad = (marker: any) => {
 }
 
 export default function MapMarker(props: MapMarkerProps) {
+    let navigate = useNavigate()
     const [showInfo, setShowInfo] = useState(false);
   
     const onHoverOpen = () => {
@@ -24,14 +26,18 @@ export default function MapMarker(props: MapMarkerProps) {
     const onHoverClose = () => {
         setShowInfo(false)
     }
-          
+
+    const handleMarkerOnClick = (e: google.maps.MapMouseEvent) => {
+        navigate("/calculations")
+    }
+
     return (
         <MarkerF
             onLoad={onLoad}
             position={props.position}
             onMouseOver={onHoverOpen}
             onMouseOut={onHoverClose}
-            //TODO: Add onClick Routing when the page is created
+            onClick={handleMarkerOnClick}
         >
             {showInfo && 
                 <InfoWindow>

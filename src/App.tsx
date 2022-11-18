@@ -7,6 +7,16 @@ import { Pricing } from "./pages/pricing";
 import { About } from "./pages/about";
 import { Account } from "./pages/account";
 import { Result } from "./pages/result";
+import Layout from "./navigation/sideBar";
+import { Panels } from "./pages/sidebarPages/panels";
+import { OverviewAsset } from "./pages/sidebarPages/overviewAsset";
+import { AssetsExisting } from "./pages/sidebarPages/assetsExisting";
+import { AssetsDefine } from "./pages/sidebarPages/assetsDefine";
+import { RetrofitsExisting } from "./pages/sidebarPages/retrofitsExisting";
+import { RetrofitsDefine } from "./pages/sidebarPages/retrofitsDefine";
+import { ScenariosExisting } from "./pages/sidebarPages/scenariosExisting";
+import { ScenariosDefine } from "./pages/sidebarPages/scenariosDefine";
+import { Calculations } from "./pages/mapRedirectPage";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -17,16 +27,23 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
-        <Navbar loggedIn={loggedIn} callback={callback} />
+        <Navbar loggedIn={loggedIn} callback={callback} />  
         <Routes>
           <Route path="/" element={<Product />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/account" element={<Account />} />
-          <Route path="/result" element={<Result />} />
+          <Route path="/result" element={Result(loggedIn)} />
+          <Route path="/panels" element={<Panels />} />
+          <Route path="/asset" element={<OverviewAsset />} />
+          <Route path="/assetsExisting" element={<AssetsExisting />} />
+          <Route path="/assetsDefine" element={<AssetsDefine />} />
+          <Route path="/retrofitsExisting" element={<RetrofitsExisting />} />
+          <Route path="/retrofitsDefine" element={<RetrofitsDefine />} />
+          <Route path="/scenariosExisting" element={<ScenariosExisting />} />
+          <Route path="/scenariosDefine" element={<ScenariosDefine />} />
+          <Route path="/calculations" element={<Calculations />} />
         </Routes>
-      </div>
     </BrowserRouter>
   );
 }
