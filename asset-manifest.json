@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c4df75b5.css",
-    "main.js": "/static/js/main.8add40a0.js",
+    "main.js": "/static/js/main.b1ef6a42.js",
     "static/js/787.ccc04c77.chunk.js": "/static/js/787.ccc04c77.chunk.js",
     "static/media/sunny-landscape-with-windmills.png": "/static/media/sunny-landscape-with-windmills.0b1e1e8c5cbfbbdc78e7.png",
     "static/media/inter-all-400-normal.woff": "/static/media/inter-all-400-normal.8c804432e8c67741aac0.woff",
@@ -21,11 +21,11 @@
     "static/media/squiggle.svg": "/static/media/squiggle.786c428da70d7b0e055e.svg",
     "index.html": "/index.html",
     "main.c4df75b5.css.map": "/static/css/main.c4df75b5.css.map",
-    "main.8add40a0.js.map": "/static/js/main.8add40a0.js.map",
+    "main.b1ef6a42.js.map": "/static/js/main.b1ef6a42.js.map",
     "787.ccc04c77.chunk.js.map": "/static/js/787.ccc04c77.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4df75b5.css",
-    "static/js/main.8add40a0.js"
+    "static/js/main.b1ef6a42.js"
   ]
 }
