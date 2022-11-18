@@ -1,74 +1,72 @@
 import React from "react";
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import MapMarker from "./MapMarker";
 
-const marks = [{
-  position: {
-    lat: 55.65492872914032,
-    lng: 12.606468200683594
+const marks = [
+  {
+    position: {
+      lat: 55.70947568192011,
+      lng: 9.556312940395532,
+    },
+    address: "Bølgen",
   },
-  address: "Address1"
-},
-{
-  position: {
-    lat: 55.66480589536855,
-    lng: 12.578659057617188
+  {
+    position: {
+      lat: 55.701357541883944,
+      lng: 12.539471740395191,
+    },
+    address: "Nordbro",
   },
-  address: "Address2"
-},
-{
-  position: {
-    lat: 55.679326612622546,
-    lng: 12.567672729492188
+  {
+    position: {
+      lat: 55.68896387296714,
+      lng: 12.578330298064369,
+    },
+    address: "Statens Museum for Kunst",
   },
-  address: "Address3"
-},
-{
-  position: {
-    lat: 55.677929060178236,
-    lng: 12.548036790411148
+  {
+    position: {
+      lat: 55.671161589493074,
+      lng: 12.576693169228761,
+    },
+    address: "Danhostel Copenhagen City",
   },
-  address: "Address4"
-},
-{
-  position: {
-    lat: 55.695955983917266,
-    lng: 12.553939819335938
+  {
+    position: {
+      lat: 55.638150358247024,
+      lng: 12.578914399906507,
+    },
+    address: "Bella Center",
   },
-  address: "Address5"
-},
-{
-  position: {
-    lat: 55.68726820680346,
-    lng: 12.58399269362576
+  {
+    position: {
+      lat: 55.61345802725619,
+      lng: 12.976307255730902,
+    },
+    address: "Turning torso",
   },
-  address: "Address6"
-}]
+];
 
 const containerStyle = {
-  width: '100%',
-  height: '50%'
+  width: "100%",
+  height: "50%",
 };
 
 const center = {
   lat: 55.67896782,
-  lng: 12.58221366
+  lng: 12.58221366,
 };
 
 function SimpleMap() {
   return (
-    <LoadScript
-      googleMapsApiKey="AIzaSyAtnAQ8cHhpJBSJeCdQUKkXr1hxGv6yN0M"
-    >
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={13}
-      >
-        {marks.map(marker => <MapMarker position={marker.position} address={marker.address}/> )}
+    <LoadScript googleMapsApiKey="AIzaSyAtnAQ8cHhpJBSJeCdQUKkXr1hxGv6yN0M">
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
+        {marks.map((marker) => (
+          <MapMarker position={marker.position} address={marker.address} />
+        ))}
       </GoogleMap>
     </LoadScript>
-  )
+  );
 }
 
-export default SimpleMap
+export default SimpleMap;

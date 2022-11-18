@@ -8,6 +8,7 @@ import { AssetList } from "../utils/assetList";
 import Box from "@mui/material/Box";
 import OverviewTable from "../utils/overviewTable";
 import { PortfolioGraph } from "../visualisation/portfolioDiagram/portfolioGraph";
+import SimpleMap from "../visualisation/map/map";
 
 export function Portfolio() {
   const [target, setTarget] = useState("1");
@@ -149,6 +150,17 @@ export function Portfolio() {
         }}
       >
         <OverviewTable />
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "35px",
+        }}
+      >
+        <div style={{ width: "62%", height: "700px" }}>
+          <SimpleMap />
+        </div>
       </Box>
     </div>
   );
