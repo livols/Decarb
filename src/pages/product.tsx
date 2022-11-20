@@ -1,4 +1,3 @@
-import Squiggle from "../images/squiggle.svg";
 import pfalogo from "../images/pfa-ejendomme.svg";
 
 export function Product() {
@@ -9,7 +8,6 @@ export function Product() {
           <div className="title">
             <span>Translating CO2 emissions targets into </span>{" "}
             <span className="action">action</span>
-            <img className="squiggle" src={Squiggle}></img>
           </div>
         </div>
         <div className="frontpage-about">
@@ -24,7 +22,7 @@ export function Product() {
           </div>
           <div className="about3">Customer stories</div>
           <div className="stories">
-            <img className="PFALogo" src={pfalogo}></img>
+            <img className="PFALogo" src={pfalogo} alt="PFALogo"></img>
             <span className="pfaText">
               Lorem ipsum dolor sit amet. Ea odio porro est repellendus dolores
               aut atque error in dolorem iste. Qui perspiciatis repudiandae nam
