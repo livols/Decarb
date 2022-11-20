@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/xtech/static/css/main.6875c2fb.css",
-    "main.js": "/xtech/static/js/main.32f63c71.js",
+    "main.css": "/xtech/static/css/main.e57453f6.css",
+    "main.js": "/xtech/static/js/main.fb0813e0.js",
     "static/js/787.ccc04c77.chunk.js": "/xtech/static/js/787.ccc04c77.chunk.js",
     "static/media/sunny-landscape-with-windmills.png": "/xtech/static/media/sunny-landscape-with-windmills.0b1e1e8c5cbfbbdc78e7.png",
     "static/media/inter-all-400-normal.woff": "/xtech/static/media/inter-all-400-normal.8c804432e8c67741aac0.woff",
@@ -20,12 +20,12 @@
     "static/media/pfa-ejendomme.svg": "/xtech/static/media/pfa-ejendomme.024f1baf28437bace8276b3fa227aba5.svg",
     "static/media/squiggle.svg": "/xtech/static/media/squiggle.786c428da70d7b0e055e.svg",
     "index.html": "/xtech/index.html",
-    "main.6875c2fb.css.map": "/xtech/static/css/main.6875c2fb.css.map",
-    "main.32f63c71.js.map": "/xtech/static/js/main.32f63c71.js.map",
+    "main.e57453f6.css.map": "/xtech/static/css/main.e57453f6.css.map",
+    "main.fb0813e0.js.map": "/xtech/static/js/main.fb0813e0.js.map",
     "787.ccc04c77.chunk.js.map": "/xtech/static/js/787.ccc04c77.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6875c2fb.css",
-    "static/js/main.32f63c71.js"
+    "static/css/main.e57453f6.css",
+    "static/js/main.fb0813e0.js"
   ]
 }
