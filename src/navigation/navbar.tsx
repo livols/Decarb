@@ -21,15 +21,15 @@ type NavbarProps = {
 };
 
 const pages = [
-  { text: "Product", href: "/" },
-  { text: "Pricing", href: "/pricing" },
-  { text: "About us", href: "/about" },
+  { text: "Product", href: "/xtech" },
+  { text: "Pricing", href: "/xtech/pricing" },
+  { text: "About us", href: "/xtech/about" },
 ];
 
 const settings = [
-  { text: "Account", href: "/account" },
-  { text: "Portfolio", href: "/portfolio" },
-  { text: "Logout", href: "/" },
+  { text: "Account", href: "/xtech/account" },
+  { text: "Portfolio", href: "/xtech/portfolio" },
+  { text: "Logout", href: "/xtech" },
 ];
 
 function Navbar(props: NavbarProps) {

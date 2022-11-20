@@ -28,7 +28,7 @@ export default function MapMarker(props: MapMarkerProps) {
     }
 
     const handleMarkerOnClick = (e: google.maps.MapMouseEvent) => {
-        navigate("/calculations")
+        navigate("/xtech/calculations")
     }
 
     return (

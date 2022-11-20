@@ -108,6 +108,11 @@ html, body, #root, #root>div {
 
 .action {
     color: #527643;
+
+    background: url('./images/squiggle.svg') bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 4px;
 }
 
 .squiggle {
@@ -195,4 +200,12 @@ html, body, #root, #root>div {
     width: 427px;
     height: 288px;
     padding-top: 2.7%;
+}
+
+.sidebarCollapseIcon {
+    float: right;
+}
+
+.rightArrowCollapse {
+    margin-left: 5px;
 }
