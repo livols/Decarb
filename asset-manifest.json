@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/xtech/static/css/main.e57453f6.css",
-    "main.js": "/xtech/static/js/main.01315e8a.js",
+    "main.js": "/xtech/static/js/main.fa33c0e4.js",
     "static/js/787.ccc04c77.chunk.js": "/xtech/static/js/787.ccc04c77.chunk.js",
     "static/media/sunny-landscape-with-windmills.png": "/xtech/static/media/sunny-landscape-with-windmills.0b1e1e8c5cbfbbdc78e7.png",
     "static/media/inter-all-400-normal.woff": "/xtech/static/media/inter-all-400-normal.8c804432e8c67741aac0.woff",
@@ -21,11 +21,11 @@
     "static/media/squiggle.svg": "/xtech/static/media/squiggle.786c428da70d7b0e055e.svg",
     "index.html": "/xtech/index.html",
     "main.e57453f6.css.map": "/xtech/static/css/main.e57453f6.css.map",
-    "main.01315e8a.js.map": "/xtech/static/js/main.01315e8a.js.map",
+    "main.fa33c0e4.js.map": "/xtech/static/js/main.fa33c0e4.js.map",
     "787.ccc04c77.chunk.js.map": "/xtech/static/js/787.ccc04c77.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e57453f6.css",
-    "static/js/main.01315e8a.js"
+    "static/js/main.fa33c0e4.js"
   ]
 }
