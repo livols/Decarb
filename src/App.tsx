@@ -28,25 +28,43 @@ function App() {
 
   return (
     <BrowserRouter>
-        <Navbar loggedIn={loggedIn} callback={callback} />
-        <Routes>
-          <Route path="/xtech" element={<Product />} />
-          <Route path="/xtech/pricing" element={<Pricing />} />
-          <Route path="/xtech/about" element={<About />} />
-          <Route path="/xtech/account" element={<Account />} />
-          <Route path="/xtech/portfolio" element={Portfolio(loggedIn)} />
-          <Route path="/xtech/panels" element={Panels(loggedIn)} />
-          <Route path="/xtech/asset" element={OverviewAsset(loggedIn)} />
-          <Route path="/xtech/assetsExisting" element={AssetsExisting(loggedIn)} />
-          <Route path="/xtech/assetsDefine" element={AssetsDefine(loggedIn)} />
-          <Route path="/xtech/retrofitsExisting" element={RetrofitsExisting(loggedIn)} />
-          <Route path="/xtech/retrofitsDefine" element={RetrofitsDefine(loggedIn)} />
-          <Route path="/xtech/scenariosExisting" element={ScenariosExisting(loggedIn)} />
-          <Route path="/xtech/scenariosDefine" element={ScenariosDefine(loggedIn)} />
-          <Route path="/xtech/calculations" element={Calculations(loggedIn)} />
-          <Route path="/xtech/euReports" element={EuReport(loggedIn)} />
-          <Route path="/xtech/quarterlyReports" element={QuarterlyReport(loggedIn)} />
-        </Routes>
+      <Navbar loggedIn={loggedIn} callback={callback} />
+      <Routes>
+        <Route path="/xtech" element={<Product />} />
+        <Route path="/xtech/pricing" element={<Pricing />} />
+        <Route path="/xtech/about" element={<About />} />
+        <Route path="/xtech/account" element={<Account />} />
+        <Route path="/xtech/portfolio" element={Portfolio(loggedIn)} />
+        <Route path="/xtech/panels" element={Panels(loggedIn)} />
+        <Route path="/xtech/asset" element={OverviewAsset(loggedIn)} />
+        <Route
+          path="/xtech/assetsExisting"
+          element={AssetsExisting(loggedIn)}
+        />
+        <Route path="/xtech/assetsDefine" element={AssetsDefine(loggedIn)} />
+        <Route
+          path="/xtech/retrofitsExisting"
+          element={RetrofitsExisting(loggedIn)}
+        />
+        <Route
+          path="/xtech/retrofitsDefine"
+          element={RetrofitsDefine(loggedIn)}
+        />
+        <Route
+          path="/xtech/scenariosExisting"
+          element={ScenariosExisting(loggedIn)}
+        />
+        <Route
+          path="/xtech/scenariosDefine"
+          element={ScenariosDefine(loggedIn)}
+        />
+        <Route path="/xtech/calculations" element={Calculations(loggedIn)} />
+        <Route path="/xtech/euReports" element={EuReport(loggedIn)} />
+        <Route
+          path="/xtech/quarterlyReports"
+          element={QuarterlyReport(loggedIn)}
+        />
+      </Routes>
     </BrowserRouter>
   );
 }

@@ -67,7 +67,7 @@ export function AssetList(props: AssetListProps) {
           }}
           onClick={() => handleClick()}
         >
-          {value === "Bottom" ? "Bottom 5 properties" : "Top 5 properties"}
+          {value === "Bottom" ? "Bottom 5 assets" : "Top 5 assets"}
         </Button>
         <Divider sx={{ paddingTop: "8px" }} />
         <List dense sx={{ maxWidth: 250 }}>
