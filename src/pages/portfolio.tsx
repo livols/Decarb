@@ -36,7 +36,6 @@ export function Portfolio(loggedIn: boolean) {
 
   const setAssetData = (value: number, address: string) => {
     setAssetName(address);
-    console.log(value);
     switch (value) {
       case 1: {
         setAsset(ID1);
