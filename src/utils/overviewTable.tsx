@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import { properties } from "../data/properties";
+import { CREproperties } from "../data/properties";
 
 const columns: GridColDef[] = [
   {
@@ -44,7 +44,7 @@ export default function OverviewTable() {
   return (
     <Box sx={{ height: 400, width: "62%" }}>
       <DataGrid
-        rows={properties}
+        rows={CREproperties}
         columns={columns}
         pageSize={5}
         rowsPerPageOptions={[5]}

@@ -8,7 +8,7 @@ import "@fontsource/inter";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { useState } from "react";
-import { properties } from "../data/properties";
+import { CREproperties } from "../data/properties";
 
 type AssetListProps = {
   callback: (value: number, name: string) => void;
@@ -17,11 +17,11 @@ type AssetListProps = {
 export function AssetList(props: AssetListProps) {
   const [value, setValue] = useState("Bottom");
 
-  const propertiesDescending = [...properties].sort(
+  const propertiesDescending = [...CREproperties].sort(
     (a, b) => b.emission - a.emission
   );
 
-  const propertiesAscending = [...properties].sort(
+  const propertiesAscending = [...CREproperties].sort(
     (a, b) => a.emission - b.emission
   );
 

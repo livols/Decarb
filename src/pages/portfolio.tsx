@@ -1,6 +1,18 @@
 import { StrandingGraph } from "../visualisation/strandingDiagram/strandingGraph";
 import { overviewData } from "../data/overview";
-import { asset1, asset2 } from "../data/assets";
+import {
+  ID1,
+  ID2,
+  ID3,
+  ID4,
+  ID5,
+  ID6,
+  ID7,
+  ID8,
+  ID9,
+  ID10,
+  ID11,
+} from "../data/assets";
 import { useEffect, useState } from "react";
 import { FormControl, MenuItem, Typography } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -14,8 +26,8 @@ import Layout from "../navigation/sideBar";
 
 export function Portfolio(loggedIn: boolean) {
   const [target, setTarget] = useState("1");
-  const [asset, setAsset] = useState(asset1);
-  const [assetName, setAssetName] = useState("Bella Center");
+  const [asset, setAsset] = useState(ID1);
+  const [assetName, setAssetName] = useState("Asset 1");
   const [data, setData] = useState(overviewData);
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -24,10 +36,56 @@ export function Portfolio(loggedIn: boolean) {
 
   const setAssetData = (value: number, name: string) => {
     setAssetName(name);
-    if (value % 2 === 0) {
-      setAsset(asset1);
-    } else {
-      setAsset(asset2);
+
+    switch (value + 1) {
+      case 1: {
+        setAsset(ID1);
+        break;
+      }
+      case 2: {
+        setAsset(ID2);
+        break;
+      }
+      case 3: {
+        setAsset(ID3);
+        break;
+      }
+      case 4: {
+        setAsset(ID4);
+        break;
+      }
+      case 5: {
+        setAsset(ID5);
+        break;
+      }
+      case 6: {
+        setAsset(ID6);
+        break;
+      }
+      case 7: {
+        setAsset(ID7);
+        break;
+      }
+      case 8: {
+        setAsset(ID8);
+        break;
+      }
+      case 9: {
+        setAsset(ID9);
+        break;
+      }
+      case 10: {
+        setAsset(ID10);
+        break;
+      }
+      case 11: {
+        setAsset(ID11);
+        break;
+      }
+      default: {
+        setAsset(ID1);
+        break;
+      }
     }
   };
 
