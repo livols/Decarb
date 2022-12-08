@@ -27,7 +27,7 @@ import Layout from "../navigation/sideBar";
 export function Portfolio(loggedIn: boolean) {
   const [target, setTarget] = useState("1");
   const [asset, setAsset] = useState(ID1);
-  const [assetName, setAssetName] = useState("Bella Center");
+  const [assetName, setAssetName] = useState("Asset 1");
   const [data, setData] = useState(overviewData);
 
   const handleChange = (event: SelectChangeEvent) => {
