@@ -11,7 +11,7 @@ import { useState } from "react";
 import { CREproperties } from "../data/properties";
 
 type AssetListProps = {
-  callback: (value: number, name: string) => void;
+  callback: (value: number, address: string) => void;
 };
 
 export function AssetList(props: AssetListProps) {
@@ -28,15 +28,15 @@ export function AssetList(props: AssetListProps) {
   const bottom = propertiesDescending
     .filter((item, index) => index < 5)
     .map((filteredItem, index) => ({
-      id: index,
-      name: filteredItem.name,
+      id: filteredItem.id,
+      address: filteredItem.address,
     }));
 
   const top = propertiesAscending
     .filter((item, index) => index < 5)
     .map((filteredItem, index) => ({
-      id: index,
-      name: filteredItem.name,
+      id: filteredItem.id,
+      address: filteredItem.address,
     }));
 
   const [data, setData] = useState(bottom);
@@ -71,16 +71,16 @@ export function AssetList(props: AssetListProps) {
         </Button>
         <Divider sx={{ paddingTop: "8px" }} />
         <List dense sx={{ maxWidth: 250 }}>
-          {data.map(({ id, name }) => {
+          {data.map(({ id, address }) => {
             return (
               <ListItem key={id} disablePadding>
                 <ListItemButton
                   onClick={() => {
-                    props.callback(id, name);
+                    props.callback(id, address);
                   }}
                 >
                   <ListItemText primaryTypographyProps={{ fontSize: "12px" }}>
-                    {`${id + 1}.`} {`${name}`}
+                    {`${id + 1}.`} {`${address}`}
                   </ListItemText>
                 </ListItemButton>
               </ListItem>

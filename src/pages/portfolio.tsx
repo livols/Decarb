@@ -27,17 +27,17 @@ import Layout from "../navigation/sideBar";
 export function Portfolio(loggedIn: boolean) {
   const [target, setTarget] = useState("1");
   const [asset, setAsset] = useState(ID8);
-  const [assetName, setAssetName] = useState("Asset 8");
+  const [assetName, setAssetName] = useState("Tølløsevej 69, 2700 København");
   const [data, setData] = useState(overviewData);
 
   const handleChange = (event: SelectChangeEvent) => {
     setTarget(event.target.value);
   };
 
-  const setAssetData = (value: number, name: string) => {
-    setAssetName(name);
-
-    switch (value + 1) {
+  const setAssetData = (value: number, address: string) => {
+    setAssetName(address);
+    console.log(value);
+    switch (value) {
       case 1: {
         setAsset(ID1);
         break;
