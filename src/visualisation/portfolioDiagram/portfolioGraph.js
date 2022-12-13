@@ -51,7 +51,7 @@ export const PortfolioGraph = (props) => {
   );
 
   return (
-    <ResponsiveContainer width="54%" height={269}>
+    <ResponsiveContainer width="54%" height={280}>
       <ComposedChart
         data={dataWithRange}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
@@ -120,7 +120,7 @@ export const PortfolioGraph = (props) => {
           tickLine={false}
           allowDecimals={false}
           label={{
-            value: "GHG Intensity [KgCO²e/m₂/yr]",
+            value: "GHG Intensity [KgCO₂e/m²/yr]",
             angle: -90,
             position: "center",
             dx: -22,

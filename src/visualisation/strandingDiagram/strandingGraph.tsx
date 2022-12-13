@@ -42,7 +42,7 @@ export const StrandingGraph = (props: {
   }, [props.target, props.strandingData]);
 
   return (
-    <ResponsiveContainer width="50%" height={269}>
+    <ResponsiveContainer width="50%" height={280}>
       <AreaChart
         data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
@@ -56,7 +56,7 @@ export const StrandingGraph = (props: {
         <XAxis dataKey="Year" stroke="#A2A3A5" />
         <YAxis
           label={{
-            value: "GHG Intensity [KgCO²e/m₂/yr]",
+            value: "GHG Intensity [KgCO₂e/m²/yr]",
             angle: -90,
             position: "center",
             dx: -22,
