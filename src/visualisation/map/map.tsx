@@ -5,45 +5,66 @@ import MapMarker from "./MapMarker";
 const marks = [
   {
     position: {
-      lat: 55.70947568192011,
-      lng: 9.556312940395532,
+      lat: 55.64827947623469,
+      lng: 12.604725496218432,
     },
-    address: "Bølgen",
+    address: "Funkiavej 54, 2300 København",
   },
   {
     position: {
-      lat: 55.701357541883944,
-      lng: 12.539471740395191,
+      lat: 55.65124649753639,
+      lng: 12.607066511558106,
     },
-    address: "Nordbro",
+    address: "Torfavej 5, 2300 København",
   },
   {
     position: {
-      lat: 55.68896387296714,
-      lng: 12.578330298064369,
+      lat: 55.65529514991005,
+      lng: 12.605112063729035,
     },
-    address: "Statens Museum for Kunst",
+    address: "Christian II's Allé 21, 2300 København",
   },
   {
     position: {
-      lat: 55.671161589493074,
-      lng: 12.576693169228761,
+      lat: 55.66048683516736,
+      lng: 12.608975911558527,
     },
-    address: "Danhostel Copenhagen City",
+    address: "Spaniensgade, 2300 København",
   },
   {
     position: {
-      lat: 55.638150358247024,
-      lng: 12.578914399906507,
+      lat: 55.665415253229106,
+      lng: 12.593026369228525,
     },
-    address: "Bella Center",
+    address: "Peter Vedels Gade 11, 2300 København",
   },
   {
     position: {
-      lat: 55.61345802725619,
-      lng: 12.976307255730902,
+      lat: 55.68105571211621,
+      lng: 12.575636898064047,
     },
-    address: "Turning torso",
+    address: "Store Kannikestræde 5, 1169 København",
+  },
+  {
+    position: {
+      lat: 55.723618230842575,
+      lng: 12.53307756923104,
+    },
+    address: "Emdrupgårdsvej 5, 2400 København",
+  },
+  {
+    position: {
+      lat: 55.70244553834966,
+      lng: 12.486234026899917,
+    },
+    address: "Tølløsevej 69, 2700 København",
+  },
+  {
+    position: {
+      lat: 55.71222653890025,
+      lng: 12.476828369230557,
+    },
+    address: "Storegårdsvej 30, 2700 København",
   },
 ];
 

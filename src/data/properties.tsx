@@ -10,7 +10,7 @@ export const CREproperties = [
   {
     id: 2,
     name: "Asset 2",
-    address: "Torfavej 5, 2300 Københavm",
+    address: "Torfavej 5, 2300 København",
     year: "2019",
     msq: 30700,
     emission: 2893.7,
