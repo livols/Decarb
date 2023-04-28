@@ -2,7 +2,7 @@ export const CREproperties = [
   {
     id: 1,
     name: "Asset 1",
-    address: "Funkiavej 54, 2300 København",
+    address: "Address 1",
     year: "2017",
     msq: 14000,
     emission: 1329,
@@ -10,7 +10,7 @@ export const CREproperties = [
   {
     id: 2,
     name: "Asset 2",
-    address: "Torfavej 5, 2300 Københavm",
+    address: "Address 2",
     year: "2019",
     msq: 30700,
     emission: 2893.7,
@@ -18,7 +18,7 @@ export const CREproperties = [
   {
     id: 3,
     name: "Asset 3",
-    address: "Christian II's Allé 21, 2300 København",
+    address: "Address 3",
     year: "2015",
     msq: 37700,
     emission: 3530.7,
@@ -26,7 +26,7 @@ export const CREproperties = [
   {
     id: 4,
     name: "Asset 4",
-    address: "Spaniensgade, 2300 København",
+    address: "Address 4",
     year: "2000",
     msq: 21000,
     emission: 2011,
@@ -34,7 +34,7 @@ export const CREproperties = [
   {
     id: 5,
     name: "Asset 5",
-    address: "Peter Vedels Gade 11, 2300 København",
+    address: "Address 5",
     year: "1995",
     msq: 41000,
     emission: 3831,
@@ -42,7 +42,7 @@ export const CREproperties = [
   {
     id: 6,
     name: "Asset 6",
-    address: "Store Kannikestræde 5, 1169 København",
+    address: "Address 6",
     year: "1993",
     msq: 32000,
     emission: 3012,
@@ -50,7 +50,7 @@ export const CREproperties = [
   {
     id: 7,
     name: "Asset 7",
-    address: "Emdrupgårdsvej 5, 2400 København",
+    address: "Address 7",
     year: "2001",
     msq: 37000,
     emission: 4012,
@@ -58,7 +58,7 @@ export const CREproperties = [
   {
     id: 8,
     name: "Asset 8",
-    address: "Tølløsevej 69, 2700 København",
+    address: "Address 8",
     year: "2005",
     msq: 22000,
     emission: 8018,
@@ -66,7 +66,7 @@ export const CREproperties = [
   {
     id: 9,
     name: "Asset 9",
-    address: "Storegårdsvej 30, 2700 København",
+    address: "Address 9",
     year: "1996",
     msq: 11000,
     emission: 1012,
@@ -74,7 +74,7 @@ export const CREproperties = [
   {
     id: 10,
     name: "Asset 10",
-    address: "Jyllandsvej 64, 2000 Frederiksberg",
+    address: "Address 10",
     year: "1998",
     msq: 54000,
     emission: 2012,
@@ -82,7 +82,7 @@ export const CREproperties = [
   {
     id: 11,
     name: "Asset 11",
-    address: "Valhøjs Alle 135D, 2610 Rødovre",
+    address: "Address 11",
     year: "2006",
     msq: 36000,
     emission: 2012,
@@ -93,7 +93,7 @@ export const properties = [
   {
     id: 1,
     name: "Bølgen",
-    address: "Ved Bølgen, 7100 Vejle",
+    address: "Address 12",
     year: "2017",
     msq: 14000,
     emission: 1329,
@@ -101,7 +101,7 @@ export const properties = [
   {
     id: 2,
     name: "Nordbro",
-    address: "Borgmestervangen 5 - 31, 2200 København N ",
+    address: "Address 13",
     year: "2019",
     msq: 30700,
     emission: 2893.7,
@@ -109,7 +109,7 @@ export const properties = [
   {
     id: 3,
     name: "Statens Museum for Kunst",
-    address: "Sølvgade 48 - 50, 1307 København K",
+    address: "Address 14",
     year: "1884 (1998)",
     msq: 37700,
     emission: 3530.7,
@@ -117,7 +117,7 @@ export const properties = [
   {
     id: 4,
     name: "Danhostel Copenhagen City",
-    address: "H.C. Andersens Boulevard 50, 1553 København V",
+    address: "Address 15",
     year: "1955",
     msq: 21000,
     emission: 2011,
@@ -125,7 +125,7 @@ export const properties = [
   {
     id: 5,
     name: "Bella Center",
-    address: "Bella Center Copenhagen, Center Boulevard 5, 2300 Copenhagen ",
+    address: "Address 16",
     year: "1975-2014",
     msq: 41000,
     emission: 3831,
@@ -133,7 +133,7 @@ export const properties = [
   {
     id: 6,
     name: "Turning torso",
-    address: "Lilla Varvsgatan 14, Malmo, Sweden",
+    address: "Address 17",
     year: "2001-2005",
     msq: 32000,
     emission: 3012,
