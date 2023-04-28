@@ -92,7 +92,7 @@ export const CREproperties = [
 export const properties = [
   {
     id: 1,
-    name: "Bølgen",
+    name: "Name 12",
     address: "Address 12",
     year: "2017",
     msq: 14000,
@@ -100,7 +100,7 @@ export const properties = [
   },
   {
     id: 2,
-    name: "Nordbro",
+    name: "Name 13",
     address: "Address 13",
     year: "2019",
     msq: 30700,
@@ -108,7 +108,7 @@ export const properties = [
   },
   {
     id: 3,
-    name: "Statens Museum for Kunst",
+    name: "Name 14",
     address: "Address 14",
     year: "1884 (1998)",
     msq: 37700,
@@ -116,7 +116,7 @@ export const properties = [
   },
   {
     id: 4,
-    name: "Danhostel Copenhagen City",
+    name: "Name 15",
     address: "Address 15",
     year: "1955",
     msq: 21000,
@@ -124,7 +124,7 @@ export const properties = [
   },
   {
     id: 5,
-    name: "Bella Center",
+    name: "Name 16",
     address: "Address 16",
     year: "1975-2014",
     msq: 41000,
@@ -132,7 +132,7 @@ export const properties = [
   },
   {
     id: 6,
-    name: "Turning torso",
+    name: "Name 17",
     address: "Address 17",
     year: "2001-2005",
     msq: 32000,
